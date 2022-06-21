@@ -1,0 +1,24 @@
+*==========
+* Missing Messages in Text-Dutch-1043.txt
+*==========
+
+2111;pop;inf;01
+SBIE2111 Process is not accessible: %3, call %2
+.
+
+2112;pop;inf;01
+SBIE2112 Object is not accessible: %3, call %2
+.
+
+2195;pop;inf;01
+SBIE2195 To run Explorer.exe sandboxed, the access for COM infrastructure must not be Open.
+.
+
+2325;pop;err;01
+SBIE2325 Debug:  %2
+.
+
+4342;txt;01
+Enable %2 fix for Windows 11 KB5014019
+.
+

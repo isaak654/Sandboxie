@@ -1,0 +1,70 @@
+*==========
+* Missing Messages in Text-Swedish-1053.txt
+*==========
+
+2325;pop;err;01
+SBIE2325 Debug:  %2
+.
+
+7978;txt;01
+Current date (%2) is later than date sent from the License Server (%3).
+.
+
+8106;txt;02
+The following programs must be closed before the installation can continue.
+Click OK to close these programs and continue.  Click Cancel to abort the installation.
+.
+
+*==========
+* Extraneous Messages in Text-Swedish-1053.txt
+*==========
+
+3503;txt;01
+Experimentellt skydd (64-bit)
+.
+
+3542;txt;01
+Experimentellt skydd förbättrar skyddet för 64-bit Sandboxie, 
+och gör det till samma nivå av skydd som finns i 32-bit Sandboxie.
+
+VIKTIGT: Experimentellt skydd använder odokumenterade funktioner 
+av Windows kerneln. Framtida uppdateringar till Windows kan störa 
+Experimentellt skydd, och kan göra systemet ostabilt.
+
+ANVÄND PÅ EGEN RISK.
+
+För att aktivera Experimentellt skydd måste du starta om datorn.
+.
+
+3543;txt;01
+För att stänga av Experimentellt skydd måste du starta om datorn.
+
+Notera att lägre rättigheter kommer slås på i alla sandlådor.
+.
+
+3962;txt;01
+Tvingade användare
+.
+
+3963;txt;01
+Om några av följande användarkonton loggar in på denna dator kommer hela inloggningssessionen att tvingas köra i denna sandlåda.
+.
+
+3964;txt;01
+För att radera en sandlåda förknippad med en tvingad användare, logga in på det kontot och ta bort sandlådan via Sandboxie Kontroll.
+.
+
+3965;txt;01
+Tvingade användare har behörighet över tvingade program och tvingade mappar.
+.
+
+8106;txt;01
+Följande program måste stängas innan installationen kan fortsätta.
+.
+
+8107;txt;01
+Stäng dessa program och klicka på > Ok, för att fortsätta. Klicka på > Avsluta, för att avsluta installationen.
+.
+
+
+

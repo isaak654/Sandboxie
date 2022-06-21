@@ -1,0 +1,305 @@
+*==========
+* Missing Messages in Text-Italian-1040.txt
+*==========
+
+1109;evt;err;01
+SBIE1109 Invalid license information:  %2
+.
+
+1202;pop;err;01
+SBIE1202 Cannot update license information:  %2
+.
+
+1222;pop;err;02
+SBIE1222 Error with security token:  %2
+.
+
+1303;pop;inf;01
+SBIE1303 Only one sandbox can be active at a time
+.
+
+1310;pop;inf;01
+SBIE1310 Extended features are disabled until the license is reactivated
+.
+
+1312;pop;inf;01
+SBIE1312 Blocked request to start a 16-bit DOS program in the sandbox
+.
+
+1313;pop;inf;01
+SBIE1313 Blocked direct disk access by process '%2'
+.
+
+3231;txt;01
+You have installed Sandboxie more than 30 days ago.
+.
+
+3233;txt;01
+However, the free version will now pause for a few seconds.
+.
+
+3234;txt;01
+However, the free version permits use of one sandbox at a time.
+.
+
+3235;txt;01
+This restriction is removed in the paid version of Sandboxie.
+.
+
+3236;txt;01
+In addition, the paid version enables automatic sandboxing for selected programs.
+.
+
+3237;txt;01
+For more information and to purchase the software, please click the following link:
+.
+
+3238;txt;01
+Please wait %2 more seconds
+.
+
+3239;txt;01
+Click to close this window and continue
+.
+
+3240;txt;01
+Click to close this window and stop
+.
+
+3455;txt;01
+&Register Sandboxie
+.
+
+3458;txt;01
+Allow direct access to Windows Font Cache
+.
+
+3771;txt;01
+(This feature is only available in the registered version of Sandboxie)
+.
+
+3950;txt;01
+Print Spooler
+.
+
+3951;txt;01
+The Windows Print Spooler runs outside of Sandboxie's supervision.  A sandboxed application that requests the Print Spooler print to a file will be blocked, because this file will be written outside the sandbox.
+.
+
+7901;txt;01
+Sandboxie License Manager
+.
+
+7902;txt;01
+System Code %2
+.
+
+7903;txt;01
+In the future, activate the license without asking
+.
+
+7921;txt;01
+Sandboxie is registered and the license is activated.
+.
+
+7922;txt;01
+Sandboxie is registered but the license should be reactivated now.
+.
+
+7923;txt;01
+Unregistered copy.  Register today!
+.
+
+7924;txt;01
+The license for Sandboxie will have to be reactivated in %2 days.
+.
+
+7925;txt;01
+The license for Sandboxie has now been activated.
+.
+
+7926;txt;01
+The expiration date of your Product Key is %2.
+.
+
+7927;txt;01
+Your Product Key does not have an expiration date.
+.
+
+7931;txt;01
+Your copy of Sandboxie is registered with an obsolete Registration Key.
+.
+
+7932;txt;01
+Please permit the License Manager to connect to the License Server and upgrade your old Registration Key to a new Product Key.  You will not be charged any fees for this upgrade.
+.
+
+7933;txt;01
+Your Registration Key is not recognized by the License Server.
+.
+
+7934;txt;01
+For licensing questions please contact: support@sandboxie.com
+.
+
+7935;txt;01
+Your new Product Key is:
+.
+
+7936;txt;01
+Please make sure to record this Product Key in a safe place for future reference.  Use the button below to copy your Product Key to the clipboard, from which you can paste it into a document and print it.
+.
+
+7937;txt;01
+&Upgrade Registration Key to Product Key
+.
+
+7941;txt;01
+Sandboxie registration is made through a third-party payment processor.  Begin the registration process by visiting the Sandboxie web site at the link below.
+.
+
+7942;txt;01
+To activate your license for Sandboxie, enter the Product Key which appears in your receipt for payment, then click the button to activate your license.
+.
+
+7943;txt;01
+Do you wish to enter a new Product Key now?
+.
+
+7944;txt;01
+&Activate License
+.
+
+7945;txt;01
+Your copy of Sandboxie is now registered.
+.
+
+7946;txt;01
+Thank you for supporting Sandboxie!
+.
+
+7951;txt;01
+Do you wish to activate the license now?
+.
+
+7952;txt;01
+Please visit the Sandboxie web site at the link below to order a new Product Key.
+.
+
+7961;txt;01
+Clear License &Information
+.
+
+7962;txt;01
+Are you sure you wish to clear the license information in Sandboxie?
+
+You can activate your license at any time by entering a Product Key.
+.
+
+7971;txt;01
+This is not a valid Product Key.
+.
+
+7972;txt;01
+This is not a valid System Code.
+.
+
+7973;txt;01
+This is not a valid Activation Key.  [%2]
+.
+
+7974;txt;01
+Invalid response from the License Server.
+.
+
+7975;txt;01
+Product activation failed:
+.
+
+7976;txt;01
+Would you like to try again now?
+.
+
+7977;txt;01
+If you need to activate Sandboxie on a computer that does not have Internet access,
+please see the Sandboxie Licensing FAQ for information about Offline Activation.
+.
+
+7978;txt;01
+Current date (%2) is later than date sent from the License Server (%3).
+.
+
+7982;txt;01
+The License Server did not specify reason for failure of activation.
+.
+
+7983;txt;01
+Product Key is not recognized by the License Server.
+.
+
+7984;txt;01
+Product Key cannot be used beyond its expiration date of %2.
+.
+
+7985;txt;01
+Product Key was activated on too many computers.
+.
+
+7986;txt;01
+Product Key was cancelled because it was made public on the Internet.
+.
+
+7987;txt;01
+Product Key was cancelled because the order was refunded.
+.
+
+*==========
+* Extraneous Messages in Text-Italian-1040.txt
+*==========
+
+1222;pop;err;01
+SBIE1222 Impossibile restringere il token: %2
+.
+
+3932;txt;01
+Accesso al sistema
+.
+
+3933;txt;01
+Le seguenti opzioni abbassano notevolmente la protezione garantita da Sandboxie, per cui è sconsigliata la loro attivazione.
+.
+
+3934;txt;01
+Consenti ai programmi in esecuzione in questa area virtuale di caricare i driver della modalità kernel nel sistema operativo
+.
+
+3935;txt;01
+Consenti ai programmi in esecuzione in questa area virtuale di caricare le applicazioni (Win32) facenti parte di altri programmi
+.
+
+3936;txt;01
+Consenti ai programmi in esecuzione in questa area virtuale di simulare l'input di tastiera e mouse.
+.
+
+3937;txt;01
+Consenti ai programmi in esecuzione in questa area virtuale di cambiare lo sfondo del desktop e gli altri parametri di sistema
+.
+
+3938;txt;01
+Consenti ai programmi in esecuzione in questa area virtuale di gestire la configurazione dei dispositivi hardware
+.
+
+3954;txt;01
+Consenti ai programmi di modificare le impostazioni di rete e del firewall
+.
+
+3946;txt;01
+Si consiglia di tenere abilitata questa impostazione, utile per compensare ad alcune misure di protezione di Sandboxie non disponibili nelle versioni a 64 bit di Windows.
+.
+
+3947;txt;01
+Per attivare una protezione migliore sulle versioni a 64 bit di Windows, utilizzare il comando Protezione sperimentale dal menu Impostazioni.
+.
+
+
+
