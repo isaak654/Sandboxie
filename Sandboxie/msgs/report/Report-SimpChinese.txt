@@ -1,0 +1,12 @@
+*==========
+* Missing Messages in Text-SimpChinese-2052.txt
+*==========
+
+2325;pop;err;01
+SBIE2325 Debug:  %2
+.
+
+4342;txt;01
+Enable %2 fix for Windows 11 KB5014019
+.
+
