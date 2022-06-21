@@ -2035,42 +2035,42 @@ Note: The update check is often behind the latest GitHub release to ensure that 
 <context>
     <name>CSbieModel</name>
     <message>
-        <location filename="Models/SbieModel.cpp" line="142"/>
+        <location filename="Models/SbieModel.cpp" line="146"/>
         <source>Box Group</source>
         <translation>Группа песочницы</translation>
     </message>
     <message>
-        <location filename="Models/SbieModel.cpp" line="251"/>
+        <location filename="Models/SbieModel.cpp" line="255"/>
         <source>Empty</source>
         <translation>Пусто</translation>
     </message>
     <message>
-        <location filename="Models/SbieModel.cpp" line="475"/>
+        <location filename="Models/SbieModel.cpp" line="479"/>
         <source>Name</source>
         <translation>Имя</translation>
     </message>
     <message>
-        <location filename="Models/SbieModel.cpp" line="476"/>
+        <location filename="Models/SbieModel.cpp" line="480"/>
         <source>Process ID</source>
         <translation>ID процесса</translation>
     </message>
     <message>
-        <location filename="Models/SbieModel.cpp" line="477"/>
+        <location filename="Models/SbieModel.cpp" line="481"/>
         <source>Status</source>
         <translation>Статус</translation>
     </message>
     <message>
-        <location filename="Models/SbieModel.cpp" line="478"/>
+        <location filename="Models/SbieModel.cpp" line="482"/>
         <source>Title</source>
         <translation>Заголовок</translation>
     </message>
     <message>
-        <location filename="Models/SbieModel.cpp" line="479"/>
+        <location filename="Models/SbieModel.cpp" line="483"/>
         <source>Info</source>
         <translation>Информация</translation>
     </message>
     <message>
-        <location filename="Models/SbieModel.cpp" line="483"/>
+        <location filename="Models/SbieModel.cpp" line="487"/>
         <source>Path / Command Line</source>
         <translation>Путь / Командная строка</translation>
     </message>
