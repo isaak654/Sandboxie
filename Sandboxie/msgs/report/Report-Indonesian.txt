@@ -90,10 +90,6 @@ Type the name of a program or path to open the following file in the current san
 &Sandboxie Forum (Web)
 .
 
-3458;txt;01
-Allow direct access to Windows Font Cache
-.
-
 3459;txt;01
 Allow direct access to qWave driver (Google Hangouts)
 .
@@ -108,14 +104,6 @@ Upgrade to Sandboxie-Plus
 
 3484;txt;01
 Resource Access
-.
-
-3950;txt;01
-Print Spooler
-.
-
-3951;txt;01
-The Windows Print Spooler runs outside of Sandboxie's supervision.  A sandboxed application that requests the Print Spooler print to a file will be blocked, because this file will be written outside the sandbox.
 .
 
 3955;txt;01
@@ -262,6 +250,14 @@ The legacy UI of Sandboxie classic does not implement support for this mode of o
 * Extraneous Messages in Text-Indonesian-1057.txt
 *==========
 
+1109;evt;err;01
+SBIE1109 Informasi lisensi tak sah:  %2
+.
+
+1202;pop;err;01
+SBIE1202 Tak dapat memutakhirkan informasi lisensi:  %2
+.
+
 1214;pop;err;01
 SBIE1214 Tak dapat menyuntikkan SbieDll %2
 .
@@ -286,8 +282,16 @@ SBIE1223 Tak dapat mengganti token:  %2
 SBIE1224 Tak dapat menanyakan token:  %2
 .
 
+1303;pop;inf;01
+SBIE1303 Hanya satu sandbox dapat aktif pada satu waktu yang bersamaan
+.
+
 1304;pop;inf;01
 SBIE1304 Simulasi papan ketik atau masukan tetikus terhalang oleh proses '%2'
+.
+
+1310;pop;inf;01
+SBIE1310 Fitur tambahan dilumpuhkan hingga lisensi diaktifkan ulang
 .
 
 1311;pop;inf;01
@@ -354,8 +358,48 @@ SBIE9253 Pembuatan pangkalan ulir gagal
 Versi tak cocok dalam Sandboxie. Cobalah menginstal ulang.
 .
 
+3231;txt;01
+Anda telah menginstal Sandboxie lebih dari 30 dari yang lalu.
+.
+
+3233;txt;01
+Akan tetapi, versi bebas sekarang akan jeda selama beberapa detik.
+.
+
+3234;txt;01
+Akan tetapi, versi bebas mengizinkan penggunaan satu sandbox pada satu waktu.
+.
+
+3235;txt;01
+Pembatasan ini dihapuskan dalam Sandboxie versi berbayar.
+.
+
+3236;txt;01
+Lebih jauh lagi, versi berbayar memfungsikan sandbox otomatis untuk beberapa program yang dipilih.
+.
+
+3237;txt;01
+Untuk informasi lebih jauh dan membeli perangkat lunak, silakan mengklik tautan berikut ini:
+.
+
+3238;txt;01
+Harap tunggu %2 detik lagi
+.
+
+3239;txt;01
+Klik untuk menutup jendela ini dan melanjutkan
+.
+
+3240;txt;01
+Klik untuk menutup jendela ini dan berhenti
+.
+
 3503;txt;01
 Proteksi Eksperimental (64-bit)
+.
+
+3455;txt;01
+&Daftarkan Sandboxie
 .
 
 3542;txt;01
@@ -379,6 +423,10 @@ Anda harus memulai ulang komputer Anda sekarang.
 
 Harap diperhatikan bahwa penataan Pelepasan Hak 
 akan diaktifkan dalam seluruh sandbox.
+.
+
+3771;txt;01
+(Fitur ini hanya tersedia dalam Sandboxie versi terdaftar)
 .
 
 3932;txt;01
@@ -409,6 +457,14 @@ Izinkan program dalam sandbox ini untuk mengubah kertas dinding destop dan param
 Izinkan program dalam sandbox ini untuk mengelola konfigurasi perangkat keras
 .
 
+3952;txt;01
+Akses Perangkat Keras
+.
+
+3953;txt;01
+Izinkan program dalam sandbox ini untuk mengubah sandi lewat akun pengguna
+.
+
 3954;txt;01
 Izinkan program untuk mengubah parameter jaringan dan tembok api
 .
@@ -423,6 +479,173 @@ Untuk mengaktifkan proteksi yang lebih baik dalam Windows 64-bit, silakan Anda m
 
 7866;txt;01
 Pada sistem Windows 64-bit, Anda mesti memfungsikan Proteksi Eksperimental.  Lihat menu Konfigurasi dalam Sandboxie Control.
+.
+
+7901;txt;01
+Pengelola Lisensi Sandboxie 
+.
+
+7902;txt;01
+Kode Sistem %2
+.
+
+7903;txt;01
+Untuk seterusnya, aktifkan lisensi tanpa bertanya
+.
+
+7921;txt;01
+Sandboxie terdaftar dan lisensi telah diaktifkan.
+.
+
+7922;txt;01
+Sandboxie terdaftar namun lisensi mesti diaktifkan sekarang.
+.
+
+7923;txt;01
+Salinan tak terdaftar. Daftar hari ini!
+.
+
+7924;txt;01
+Lisensi Sandboxie harus diaktifkan dalam waktu %2 hari.
+.
+
+7925;txt;01
+Lisensi Sandboxie telah diaktifkan.
+.
+
+7926;txt;01
+Tanggal kedaluwarsa Kunci Produk Anda adalah %2.
+.
+
+7927;txt;01
+Kunci Produk Anda tak mempunyai tanggal kedaluwarsa.
+.
+
+7931;txt;01
+Salinan Sandboxie Anda terdaftar dengan Kunci Pendaftaran usang.
+.
+
+7932;txt;01
+Harap izinkan Pengelola Lisensi untuk menghubungi Peladen Lisensi dan menatar Kunci Pendaftaran usang Anda ke Kunci Produk baru. Anda tak akan dikenakan tambahan biaya untuk penataran ini.
+.
+
+7933;txt;01
+Kunci Pendaftaran Anda tak dikenal oleh Peladen Lisensi.
+.
+
+7934;txt;01
+Jika Anda telah menggunakan Kunci Pendaftaran sah yang Anda bayar, atau diberikan kepada Anda sebagai hadiah atau sebagai bagian dari sebuah promosi, maka silakan Anda mengirimkan surel ke:
+.
+
+7935;txt;01
+Kunci Produk baru adalah:
+.
+
+7936;txt;01
+Harap simpan Kunci Produk ini dalam tempat yang aman untuk rujukan mendatang. Gunakan tombol di bawah ini untuk menyalin Kunci Produk Anda ke papan klip, lalu dari situ Anda dapat memastanya ke dalam dokumen dan mencetaknya.
+.
+
+7937;txt;01
+&Tatar Kunci Pendaftaran ke Kunci Produk
+.
+
+7941;txt;01
+Pendaftaran Sandboxie dilakukan melalui pemroses pembayaran pihak ketiga. Mulai proses pendaftaran dengan mengunjungi halaman web Sandboxie pada tautan berikut ini.
+.
+
+7942;txt;01
+Untuk mengaktifkan lisensi Sandboxie Anda, masukkan Kunci Produk yang tercantum pada resep pembayaran, kemudian klik tombol untuk mengaktifkan lisensi Anda.
+.
+
+7943;txt;01
+Apakah Anda ingin memasukkan Kunci Produk sekarang?
+.
+
+7944;txt;01
+&Aktifkan Lisensi
+.
+
+7945;txt;01
+Salinan Sandboxie Anda kini terdaftar.
+.
+
+7946;txt;01
+Terima kasih atas dukungan Anda pada Sandboxie!
+.
+
+7951;txt;01
+Apakah Anda ingin mengaktifkan lisensi sekarang?
+.
+
+7952;txt;01
+Silakan Anda mengunjungi situs web Sandboxie pada tautan di bawah ini guna memesan Kunci Produk baru.
+.
+
+7961;txt;01
+Bersihkan Lisensi &Informasi
+.
+
+7962;txt;01
+Apakah Anda yakin hendak membersihkan informasi lisensi pada Sandboxie?
+
+Anda dapat mengaktifkan lisensi Anda kapan saja dengan memasukkan sebuah Kunci Produk.
+.
+
+7971;txt;01
+Ini bukan Kunci Produk yang sah.
+.
+
+7972;txt;01
+Ini bukan Kode Sistem yang sah.
+.
+
+7973;txt;01
+Ini bukan Kunci Pengaktifan yang sah.  [%2]
+.
+
+7974;txt;01
+Jawaban tak sah dari Peladen Lisensi.
+.
+
+7975;txt;01
+Pengaktifan produk gagal:
+.
+
+7976;txt;01
+Apakah Anda ingin mencoba lagi sekarang?
+.
+
+7977;txt;01
+Jika Anda ingin mengaktifkan Sandboxie pada komputer tanpa akses Internet,
+silakan Anda melihat Sandboxie Licensing FAQ untuk informasi mengenai Pengaktifan Terputus.
+.
+
+7978;txt;01
+Tanggal saat ini (%2) lebih maju daripada tanggal yang dikirim dari Peladen Lisensi (%3).
+.
+
+7982;txt;01
+Peladen Lisensi tak menyebutkan penyebab kegagalan pengaktifan.
+.
+
+7983;txt;01
+Kunci Produk tak dikenali oleh Peladen Lisensi.
+.
+
+7984;txt;01
+Kunci Produk tak bisa digunakan di luar tanggal kedaluwarsa %2.
+.
+
+7985;txt;01
+Kunci Produk diaktifkan pada terlalu banyak komputer.
+.
+
+7986;txt;01
+Kunci Produk dibatalkan sebab dipublikasikan di Internet.
+.
+
+7987;txt;01
+Kunci Produk dibatalkan sebab pesanan dikembalikan.
 .
 
 

@@ -90,10 +90,6 @@ Type the name of a program or path to open the following file in the current san
 &Sandboxie Forum (Web)
 .
 
-3458;txt;01
-Allow direct access to Windows Font Cache
-.
-
 3459;txt;01
 Allow direct access to qWave driver (Google Hangouts)
 .
@@ -108,22 +104,6 @@ Upgrade to Sandboxie-Plus
 
 3484;txt;01
 Resource Access
-.
-
-3950;txt;01
-Print Spooler
-.
-
-3951;txt;01
-The Windows Print Spooler runs outside of Sandboxie's supervision.  A sandboxed application that requests the Print Spooler print to a file will be blocked, because this file will be written outside the sandbox.
-.
-
-3952;txt;01
-If you wish to allow the Print Spooler to print to a file, you can enable this setting. It is recommended that you enable this option only when needed.
-.
-
-3953;txt;01
-Allow the Windows Print Spooler to print to file.
 .
 
 3955;txt;01
@@ -270,10 +250,66 @@ The legacy UI of Sandboxie classic does not implement support for this mode of o
 * Extraneous Messages in Text-Arabic-1025.txt
 *==========
 
-1311;pop;inf;01
+1109;evt;err;01
+SBIE1107 .2. :1202;pop;err;01
+SBIE1202 .2.: 1303;pop;inf;01
+SBIE1303 1310;pop;inf;01
+SBIE1310 1311;pop;inf;01
 SBIE1311 2334;pop;err;01
-SBIE2334 .2. : DLL3542;txt;01
+SBIE2334 .2. : DLL3231;txt;01
+3233;txt;01
+3234;txt;01
+3235;txt;01
+Sandboxie 3236;txt;01
+ 3237;txt;01
+: 3238;txt;01
+3239;txt;01
+3240;txt;01
+3455;txt;01
+&Sandboxie 3542;txt;01
 3543;txt;01
+3771;txt;01
 7866;txt;01
+7901;txt;01
+ 7902;txt;01
+.7903;txt;01
+7921;txt;01
+7922;txt;01
+7923;txt;01
+ !7924;txt;01
+7925;txt;01
+7926;txt;01
+.7927;txt;01
+7931;txt;01
+7932;txt;01
+7933;txt;01
+7934;txt;01
+:7935;txt;01
+:7936;txt;01
+7937;txt;01
+7941;txt;01
+7942;txt;01
+7943;txt;01
+7944;txt;01
+7945;txt;01
+Sandboxie 7946;txt;01
+!Sandboxie 7951;txt;01
+7952;txt;01
+7961;txt;01
+7962;txt;01
+7971;txt;01
+7972;txt;01
+7973;txt;01
+   [.2.]7974;txt;01
+7975;txt;01
+:7976;txt;01
+7977;txt;01
+7978;txt;01
+7982;txt;01
+7983;txt;01
+7984;txt;01
+.7985;txt;01
+7986;txt;01
+7987;txt;01
 
 

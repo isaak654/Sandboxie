@@ -90,10 +90,6 @@ Type the name of a program or path to open the following file in the current san
 &Sandboxie Forum (Web)
 .
 
-3458;txt;01
-Allow direct access to Windows Font Cache
-.
-
 3459;txt;01
 Allow direct access to qWave driver (Google Hangouts)
 .
@@ -108,14 +104,6 @@ Upgrade to Sandboxie-Plus
 
 3484;txt;01
 Resource Access
-.
-
-3950;txt;01
-Print Spooler
-.
-
-3951;txt;01
-The Windows Print Spooler runs outside of Sandboxie's supervision.  A sandboxed application that requests the Print Spooler print to a file will be blocked, because this file will be written outside the sandbox.
 .
 
 3955;txt;01
@@ -262,14 +250,18 @@ The legacy UI of Sandboxie classic does not implement support for this mode of o
 * Extraneous Messages in Text-Slovak-1051.txt
 *==========
 
-1214;pop;err;01
+1109;evt;err;01
+SBIE1109 Neplatné licen1202;pop;err;01
+SBIE1202 Nemo1214;pop;err;01
 SBIE1214 Nemo1215;pop;err;01
 SBIE1215 Nemo1216;pop;err;01
 SBIE1216 Nepodarilo sa  dotazova1222;pop;err;01
 SBIE1222 Nemo1223;pop;err;01
 SBIE1223 Nemo1224;pop;err;01
-SBIE1224 Nemo1304;pop;inf;01
-SBIE1304 Blokovaná simulovaná klavesnica alebo vstup my1311;pop;inf;01
+SBIE1224 Nemo1303;pop;inf;01
+SBIE1303 Len jedno Pieskovisko mo1304;pop;inf;01
+SBIE1304 Blokovaná simulovaná klavesnica alebo vstup my1310;pop;inf;01
+SBIE1310 Roz1311;pop;inf;01
 SBIE1311 Blokovaná po1315;pop;inf;01
 SBIE1315 Pravdepodobne kvôli konfliktu so softwarom: %2
 .
@@ -306,22 +298,109 @@ SBIE9253 Zlyhanie vytvorenia vlákna portu
 .
 
 3211;txt;01
-Nezhoda vo verzii Sandboxie.  Skúste prein3503;txt;01
+Nezhoda vo verzii Sandboxie.  Skúste prein3231;txt;01
+Sandboxie máte nain3233;txt;01
+Av3234;txt;01
+Av3235;txt;01
+Toto obmedzenie neplatí v platenej FULL (plná) verzii Sandboxie.
+.
+
+3236;txt;01
+Okrem toho full (plná) verzia umo3237;txt;01
+Pre viac informácií a o zakúpení software, prosím kliknú3238;txt;01
+Prosím 3239;txt;01
+Kliknite pre zatvorenie tohoto okna a pokra3240;txt;01
+Kliknite pre zatvorenie tohoto okna a skon3503;txt;01
 Expermentálna Ochrana (64-bit)
+.
+
+3455;txt;01
+&Register Pieskoviska
 .
 
 3542;txt;01
 Mód Experimentálna 0chrana zvy3543;txt;01
-Vypnutie re3932;txt;01
+Vypnutie re3771;txt;01
+(Táto funkcia je dostupná len v registrovanej verzii Sandboxie)
+.
+
+3932;txt;01
 Nízkoúrov3933;txt;01
 Nasledujúce nastavenia oslabia ochranu, ktorú poskytuje Sandboxie. Zapnutie niektorých alebo v3934;txt;01
 Povoli3935;txt;01
 Povoli3936;txt;01
 Povoli3937;txt;01
 Povoli3938;txt;01
+Povoli3952;txt;01
+Hardwarový Prístup
+.
+
+3953;txt;01
 Povoli3954;txt;01
 Povoli3946;txt;01
 Doporu3947;txt;01
 Aktivova7866;txt;01
-V 64-bit systéme Windows by ste mali zapnú
+V 64-bit systéme Windows by ste mali zapnú7901;txt;01
+Sandboxie Licen7902;txt;01
+Systémový Kód %2
+.
+
+7903;txt;01
+V budúcnosti aktivova7921;txt;01
+Sandboxie je registrovaný a licencia aktivovaná.
+.
+
+7922;txt;01
+Sandboxie je registrovaný, ale licencia by mala by7923;txt;01
+Neregistrovaná kópia.  Zaregistrujte dnes!
+.
+
+7924;txt;01
+Licencia pre Sandboxie bude musie7925;txt;01
+Licencia pre Sandboxie je teraz aktivovaná.
+.
+
+7926;txt;01
+Dátum ukon7927;txt;01
+Vá7931;txt;01
+Va7932;txt;01
+Prosím povoli7933;txt;01
+Vá7934;txt;01
+Ak pou7935;txt;01
+Vá7936;txt;01
+Prosím, uschovajte tento Produktový K7937;txt;01
+&Vylep7941;txt;01
+Sandboxie registrácia je vyrobená cez procesor zakúpený od tretej strany.  Za7942;txt;01
+Pre aktiváciu Va7943;txt;01
+7944;txt;01
+&Aktivácia Licencie
+.
+
+7945;txt;01
+Va7946;txt;01
+7951;txt;01
+7952;txt;01
+Prosím nav7961;txt;01
+Vymaza7962;txt;01
+7971;txt;01
+Toto nie je platný Produktový K7972;txt;01
+Toto nie je platný Systémový Kód.
+.
+
+7973;txt;01
+Toto nie je platný Aktiva7974;txt;01
+Neplatná odpove7975;txt;01
+Aktivácia Produktu zlyhala:
+.
+
+7976;txt;01
+Prajete si to teraz skúsi7977;txt;01
+Ak potrebujete aktivova7978;txt;01
+Aktuálny dátum (%2) je star7982;txt;01
+Licen7983;txt;01
+Produktový K7984;txt;01
+Produktový K7985;txt;01
+Produktový K7986;txt;01
+Produktový K7987;txt;01
+Produktový K
 

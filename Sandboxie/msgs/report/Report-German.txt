@@ -86,10 +86,6 @@ Type the name of a program or path to open the following file in the current san
 &Sandboxie Forum (Web)
 .
 
-3458;txt;01
-Allow direct access to Windows Font Cache
-.
-
 3459;txt;01
 Allow direct access to qWave driver (Google Hangouts)
 .
@@ -104,14 +100,6 @@ Upgrade to Sandboxie-Plus
 
 3484;txt;01
 Resource Access
-.
-
-3950;txt;01
-Print Spooler
-.
-
-3951;txt;01
-The Windows Print Spooler runs outside of Sandboxie's supervision.  A sandboxed application that requests the Print Spooler print to a file will be blocked, because this file will be written outside the sandbox.
 .
 
 3955;txt;01
@@ -258,6 +246,14 @@ The legacy UI of Sandboxie classic does not implement support for this mode of o
 * Extraneous Messages in Text-German-1031.txt
 *==========
 
+1109;evt;err;01
+SBIE1109 Ungültige Lizenz-Informationen: %2
+.
+
+1202;pop;err;01
+SBIE1202 Kann die Lizenz-Informationen nicht aktualisieren:  %2
+.
+
 1214;pop;err;01
 SBIE1214 Injizieren (Laden) der SbieDll in %2 nicht möglich
 .
@@ -282,8 +278,16 @@ SBIE1223 Kann den Security-Token nicht ersetzen: %2
 SBIE1224 Kann den Security-Token nicht abfragen: %2
 .
 
+1303;pop;inf;01
+SBIE1303 Es kann nur eine Sandbox aktiv sein
+.
+
 1304;pop;inf;01
 SBIE1304 Simulierte Tastatur- oder Mauseingabe blockiert bei Prozess '%2'
+.
+
+1310;pop;inf;01
+SBIE1310 Erweiterte Funktionen sind deaktiviert bis die Lizenz erneut aktiviert wird
 .
 
 1311;pop;inf;01
@@ -350,8 +354,48 @@ SBIE9253 LPC Port Thread Erstellung gescheitert
 Falsche Sandboxie-Version. Bitte installieren Sie Sandboxie neu.
 .
 
+3231;txt;01
+Sie haben Sandboxie vor mehr als 30 Tagen installiert.
+.
+
+3233;txt;01
+Die unlizenzierte Version pausiert hier für wenige Sekunden.
+.
+
+3234;txt;01
+Die unlizenzierte Version erlaubt nur eine Sandbox gleichzeitig.
+.
+
+3235;txt;01
+Diese Einschränkung wird mit dem Erwerb einer Lizenz aufgehoben.
+.
+
+3236;txt;01
+Die lizenzierte Version erlaubt den erzwungenen Start von Programmen in einer Sandbox.
+.
+
+3237;txt;01
+Für weitere Informationen oder den Erwerb einer Lizenz klicken Sie auf den folgenden Link:
+.
+
+3238;txt;01
+Bitte warten Sie %2 Sekunden
+.
+
+3239;txt;01
+Dieses Fenster schließen und fortsetzen
+.
+
+3240;txt;01
+Dieses Fenster schließen und beenden
+.
+
 3503;txt;01
 Experimenteller Schutz (64-bit)
+.
+
+3455;txt;01
+Sandboxie &registrieren
 .
 
 3542;txt;01
@@ -376,6 +420,10 @@ müssen Sie den Computer jetzt neu starten.
 
 Bitte beachten Sie, dass die Drop Rights Einstellung
 für alle Sandboxen aktiviert wird.
+.
+
+3771;txt;01
+(Dieses Feature ist nur in der registrierten Version von Sandboxie verfügbar)
 .
 
 3932;txt;01
@@ -406,6 +454,14 @@ Programme in dieser Sandbox dürfen den Desktophintergrund und andere Systemeinst
 Programme in dieser Sandbox dürfen die Eigenschaften der Hardwaregeräte ändern.
 .
 
+3952;txt;01
+Hardwarezugriff
+.
+
+3953;txt;01
+Programme in dieser Sandbox dürfen das Benutzerkontokennwort ändern
+.
+
 3954;txt;01
 Programmen die Änderung der Netzwerk- und Firewall-Einstellungen erlauben
 .
@@ -420,6 +476,173 @@ Um den Experimentellen Schutz bei 64-bit Windows zu aktivieren, wählen Sie bitte
 
 7866;txt;01
 Bei 64-bit Windows Systemen sollte "Experimenteller Schutz" aktiviert werden. Siehe Menü Konfiguration der Sandboxie Control.
+.
+
+7901;txt;01
+Sandboxie Lizenzmanager
+.
+
+7902;txt;01
+Systemcode %2
+.
+
+7903;txt;01
+Zukünftig die Lizenz ohne Nachfrage aktivieren.
+.
+
+7921;txt;01
+Sandboxie ist registriert und die Lizenz ist aktiviert.
+.
+
+7922;txt;01
+Sandboxie ist registriert, aber die Lizenz sollte jetzt erneut aktiviert werden.
+.
+
+7923;txt;01
+Nicht registrierte Version.  Noch heute registrieren!
+.
+
+7924;txt;01
+Die Lizenz für Sandboxie muss in %2 Tagen erneut aktiviert werden.
+.
+
+7925;txt;01
+Die Lizenz für Sandboxie wurde soeben aktiviert.
+.
+
+7926;txt;01
+Das Ablaufdatum für Ihren Produktschlüssel ist %2.
+.
+
+7927;txt;01
+Ihr Produktschlüssel hat kein Ablaufdatum.
+.
+
+7931;txt;01
+Die Registrierung Ihrer Kopie von Sandboxie ist mit einem veralteten Registrierungsschlüssel erfolgt.
+.
+
+7932;txt;01
+Bitte erlauben Sie dem Lizenzmanager sich mit dem Lizenzserver zu verbinden, um Ihren alten Registrierungsschlüssel in einen neuen Produktschlüssel umzuwandeln. Dieser Vorgang ist für Sie vollkommen kostenlos.
+.
+
+7933;txt;01
+Ihr Registrierungsschlüssel wird vom Lizenzserver nicht anerkannt.
+.
+
+7934;txt;01
+Wenn dies ein legaler Registrierungsschlüssel ist, den Sie gekauft, geschenkt bekommen oder bei einer Promoaktion erhalten haben, dann senden Sie bitte eine E-Mail an:
+.
+
+7935;txt;01
+Ihr neuer Produktschlüssel ist:
+.
+
+7936;txt;01
+Bitte sichern Sie diesen Produktschlüssel für eine spätere Verwendung an einem geeigneten Ort. Mit der Schaltfläche unten können Sie Ihren Produktschlüssel kopieren, um ihn in ein Dokument zu speichern und auszudrucken.
+.
+
+7937;txt;01
+Registrierungsschlüssel in Produktschlüssel &umwandeln
+.
+
+7941;txt;01
+Die Sandboxie-Registrierung wird durch einen Drittanbieter durchgeführt. Klicken Sie auf den folgenden Link, um den Registrierungsprozess zu starten.
+.
+
+7942;txt;01
+Zur Aktivierung Ihrer Sandboxie Lizenz bitte den Produktschlüssel von Ihrem Zahlungsbeleg eingeben und dann bestätigen, um die Lizenz zu aktivieren.
+.
+
+7943;txt;01
+Möchten Sie jetzt einen neuen Produktschlüssel eingeben?
+.
+
+7944;txt;01
+&Lizenz aktivieren
+.
+
+7945;txt;01
+Ihre Kopie von Sandboxie ist nun registriert.
+.
+
+7946;txt;01
+Vielen Dank für Ihre Unterstützung!
+.
+
+7951;txt;01
+Möchten Sie jetzt die Lizenz aktivieren?
+.
+
+7952;txt;01
+Bitte besuchen Sie die Sandboxie Webseite über den Link unten, um einen Produktschlüssel zu bestellen.
+.
+
+7961;txt;01
+Lizenz&informationen löschen
+.
+
+7962;txt;01
+Möchten Sie die Lizenzinformationen wirklich aus Sandboxie löschen?
+
+Sie können Ihre Lizenz jederzeit durch die Eingabe eines Produktschlüssels aktivieren.
+.
+
+7971;txt;01
+Dies ist kein gültiger Produktschlüssel.
+.
+
+7972;txt;01
+Dies ist kein gültiger Systemcode.
+.
+
+7973;txt;01
+Dies ist kein gültiger Aktivierungsschlüssel. [%2]
+.
+
+7974;txt;01
+Ungültige Antwort vom Lizenzserver.
+.
+
+7975;txt;01
+Produktaktivierung gescheitert:
+.
+
+7976;txt;01
+Möchten Sie es noch einmal versuchen?
+.
+
+7977;txt;01
+Wenn Sie Sandboxie bei einem Computer ohne Internetzugang aktivieren möchten,
+dann lesen Sie bitte im 'Sandboxie Licensing FAQ' die Informationen zur 'Offline Activation'.
+.
+
+7978;txt;01
+Aktuelles Datum (%2) stimmt mit dem Datum des Lizenzservers (%3) nicht überein.
+.
+
+7982;txt;01
+Der Lizenzserver hat für das Scheitern der Aktivierung keine Gründe angegeben.
+.
+
+7983;txt;01
+Der Produktschlüssel wurde vom Lizenzserver nicht erkannt.
+.
+
+7984;txt;01
+Der Produktschlüssel kann nur bis zu seinem Ablaufdatum %2 verwendet werden.
+.
+
+7985;txt;01
+Der Produktschlüssel wurde auf zu vielen Computern aktiviert.
+.
+
+7986;txt;01
+Der Produktschlüssel wurde annulliert, weil er im Internet veröffentlicht wurde.
+.
+
+7987;txt;01
+Der Produktschlüssel wurde annulliert, weil der Kaufpreis rückerstattet wurde.
 .
 
 
