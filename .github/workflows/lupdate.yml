@@ -8,9 +8,8 @@ on:
 
 jobs:
   SBIE_Plus_lupdate:
-
-    # Do not run the scheduled workflow on forks
-    #if: github.event_name != 'schedule' || github.repository_owner == 'sandboxie-plus'
+    # Do not schedule it on forks
+    if: (github.event_name == 'schedule' && github.repository_owner == 'sandboxie-plus') || (github.event_name != 'schedule')
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -50,9 +49,8 @@ jobs:
           echo "Created commit: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/commit/$deploy_commit"
 
   SBIE_reports:
-
-    # Do not run the scheduled workflow on forks
-    #if: github.event_name != 'schedule' || github.repository_owner == 'sandboxie-plus'
+    # Do not schedule it on forks
+    if: (github.event_name == 'schedule' && github.repository_owner == 'sandboxie-plus') || (github.event_name != 'schedule')
     runs-on: windows-2019
     timeout-minutes: 15
 
