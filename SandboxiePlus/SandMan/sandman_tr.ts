@@ -2235,22 +2235,22 @@ Not: Güncelleme denetimi, yalnızca test edilmiş güncellemelerin sunulduğund
 <context>
     <name>CSbieModel</name>
     <message>
-        <location filename="Models/SbieModel.cpp" line="479"/>
+        <location filename="Models/SbieModel.cpp" line="475"/>
         <source>Name</source>
         <translation>Ad</translation>
     </message>
     <message>
-        <location filename="Models/SbieModel.cpp" line="146"/>
+        <location filename="Models/SbieModel.cpp" line="142"/>
         <source>Box Group</source>
         <translation>Kutu Grubu</translation>
     </message>
     <message>
-        <location filename="Models/SbieModel.cpp" line="255"/>
+        <location filename="Models/SbieModel.cpp" line="251"/>
         <source>Empty</source>
         <translation>Boş</translation>
     </message>
     <message>
-        <location filename="Models/SbieModel.cpp" line="481"/>
+        <location filename="Models/SbieModel.cpp" line="477"/>
         <source>Status</source>
         <translation>Durum</translation>
     </message>
@@ -2259,22 +2259,22 @@ Not: Güncelleme denetimi, yalnızca test edilmiş güncellemelerin sunulduğund
         <translation type="vanished">Başlangıç Zamanı</translation>
     </message>
     <message>
-        <location filename="Models/SbieModel.cpp" line="480"/>
+        <location filename="Models/SbieModel.cpp" line="476"/>
         <source>Process ID</source>
         <translation>İşlem Kimliği</translation>
     </message>
     <message>
-        <location filename="Models/SbieModel.cpp" line="487"/>
+        <location filename="Models/SbieModel.cpp" line="483"/>
         <source>Path / Command Line</source>
         <translation>Yol / Komut Satırı</translation>
     </message>
     <message>
-        <location filename="Models/SbieModel.cpp" line="482"/>
+        <location filename="Models/SbieModel.cpp" line="478"/>
         <source>Title</source>
         <translation>Başlık</translation>
     </message>
     <message>
-        <location filename="Models/SbieModel.cpp" line="483"/>
+        <location filename="Models/SbieModel.cpp" line="479"/>
         <source>Info</source>
         <translation>Bilgi</translation>
     </message>
