@@ -90,6 +90,10 @@ Type the name of a program or path to open the following file in the current san
 &Sandboxie Forum (Web)
 .
 
+3458;txt;01
+Allow direct access to Windows Font Cache
+.
+
 3459;txt;01
 Allow direct access to qWave driver (Google Hangouts)
 .
@@ -104,6 +108,14 @@ Upgrade to Sandboxie-Plus
 
 3484;txt;01
 Resource Access
+.
+
+3950;txt;01
+Print Spooler
+.
+
+3951;txt;01
+The Windows Print Spooler runs outside of Sandboxie's supervision.  A sandboxed application that requests the Print Spooler print to a file will be blocked, because this file will be written outside the sandbox.
 .
 
 3955;txt;01
@@ -250,18 +262,14 @@ The legacy UI of Sandboxie classic does not implement support for this mode of o
 * Extraneous Messages in Text-Russian-1049.txt
 *==========
 
-1109;evt;err;01
-SBIE1109 1202;pop;err;01
-SBIE1202 1214;pop;err;01
+1214;pop;err;01
 SBIE1214 1215;pop;err;01
 SBIE1215 1216;pop;err;01
 SBIE1216 1222;pop;err;01
 SBIE1222 1223;pop;err;01
 SBIE1223 1224;pop;err;01
-SBIE1224 1303;pop;inf;01
-SBIE1303 1304;pop;inf;01
-SBIE1304 1310;pop;inf;01
-SBIE1310 1311;pop;inf;01
+SBIE1224 1304;pop;inf;01
+SBIE1304 1311;pop;inf;01
 SBIE1311 1315;pop;inf;01
 SBIE1315 2315;pop;err;01
 SBIE2315 2334;pop;err;01
@@ -277,73 +285,19 @@ SBIE9208 9251;evt;err;01
 SBIE9251 9252;evt;err;01
 SBIE9252 9253;evt;err;01
 SBIE9253 3211;txt;01
-3231;txt;01
-3233;txt;01
-3234;txt;01
-3235;txt;01
-3236;txt;01
-3237;txt;01
-3238;txt;01
-3239;txt;01
-3240;txt;01
 3503;txt;01
-3455;txt;01
-&3542;txt;01
+3542;txt;01
 3543;txt;01
-3771;txt;01
-(3932;txt;01
+3932;txt;01
 3933;txt;01
 3934;txt;01
 3935;txt;01
 3936;txt;01
 3937;txt;01
 3938;txt;01
-3952;txt;01
-3953;txt;01
 3954;txt;01
 3946;txt;01
 3947;txt;01
 7866;txt;01
-7901;txt;01
-7902;txt;01
-7903;txt;01
-7921;txt;01
-Sandboxie 7922;txt;01
-Sandboxie 7923;txt;01
-7924;txt;01
-7925;txt;01
-7926;txt;01
-7927;txt;01
-7931;txt;01
-7932;txt;01
-7933;txt;01
-7934;txt;01
-7935;txt;01
-7936;txt;01
-7937;txt;01
-&7941;txt;01
-7942;txt;01
-7943;txt;01
-7944;txt;01
-&7945;txt;01
-7946;txt;01
-7951;txt;01
-7952;txt;01
-7961;txt;01
-&7962;txt;01
-7971;txt;01
-7972;txt;01
-7973;txt;01
-7974;txt;01
-7975;txt;01
-7976;txt;01
-7977;txt;01
-7978;txt;01
-7982;txt;01
-7983;txt;01
-7984;txt;01
-7985;txt;01
-7986;txt;01
-7987;txt;01
 
 

@@ -90,6 +90,10 @@ Type the name of a program or path to open the following file in the current san
 &Sandboxie Forum (Web)
 .
 
+3458;txt;01
+Allow direct access to Windows Font Cache
+.
+
 3459;txt;01
 Allow direct access to qWave driver (Google Hangouts)
 .
@@ -104,6 +108,22 @@ Upgrade to Sandboxie-Plus
 
 3484;txt;01
 Resource Access
+.
+
+3950;txt;01
+Print Spooler
+.
+
+3951;txt;01
+The Windows Print Spooler runs outside of Sandboxie's supervision.  A sandboxed application that requests the Print Spooler print to a file will be blocked, because this file will be written outside the sandbox.
+.
+
+3952;txt;01
+If you wish to allow the Print Spooler to print to a file, you can enable this setting. It is recommended that you enable this option only when needed.
+.
+
+3953;txt;01
+Allow the Windows Print Spooler to print to file.
 .
 
 3955;txt;01
@@ -250,117 +270,13 @@ The legacy UI of Sandboxie classic does not implement support for this mode of o
 * Extraneous Messages in Text-Croatian-1050.txt
 *==========
 
-1109;evt;err;01
-SBIE1109 Pogre1202;pop;err;01
-SBIE1202 Ne mogu nadograditi licencne informacije:  %2
-.
-
-1303;pop;inf;01
-SBIE1303 Samo jedan sandbox mo1310;pop;inf;01
-SBIE1310 Dodatne zna1311;pop;inf;01
+1311;pop;inf;01
 SBIE1311 Blokiran zahtjev za promjenom desktop pozadine od procesa '%2'
 .
 
 2334;pop;err;01
-SBIE2334 Ne mogu u3231;txt;01
-Instalirali ste Sandboxie prije vi3233;txt;01
-Me3234;txt;01
-Me3235;txt;01
-Ovo ograni3236;txt;01
-Dodatno, pla3237;txt;01
-Za vi3238;txt;01
-Molim sa3239;txt;01
-Kliknite za zatvaranje ovog prozora i nastavak
-.
-
-3240;txt;01
-Kliknite za zatvaranje ovog prozora i prekid
-.
-
-3455;txt;01
-&Registriraj Sandboxie
-.
-
-3542;txt;01
+SBIE2334 Ne mogu u3542;txt;01
 Mod Experimentalne Za3543;txt;01
-Za ga3771;txt;01
-(Ovo svojstvo je dostupno jedino u registriranoj verziji Sandboxie)
-.
-
-7866;txt;01
-Na 64-bitnim Windows sistemima, trebali bi ste omogu7901;txt;01
-Sandboxie Licencni Upravitelj
-.
-
-7902;txt;01
-Sistemski Kod %2
-.
-
-7903;txt;01
-Ubudu7921;txt;01
-Sandboxie je registriran i licenca je aktivirana.
-.
-
-7922;txt;01
-Sandboxie je registriran ali bi trebalo reaktivirati licencu.
-.
-
-7923;txt;01
-Neregistrirana kopija.  Registrirajte danas!
-.
-
-7924;txt;01
-Licencu za Sandboxie trebat 7925;txt;01
-Licenca za Sandboxie je sada aktivirana.
-.
-
-7926;txt;01
-Datum isteka va7927;txt;01
-Va7931;txt;01
-Va7932;txt;01
-Molim dozvolite Licencnom Upravitelju spajanje na Licencni Server i nadogradite svoj stari Registracijski Klju7933;txt;01
-Va7934;txt;01
-Ako ste koristili legitiman Registracijski Klju7935;txt;01
-Va7936;txt;01
-Molim spremite ovaj Klju7937;txt;01
-&Nadogradite Registracijski Klju7941;txt;01
-Sandboxie registarcija se vr7942;txt;01
-Da biste aktivirali licencu za Sandboxie, unesite Klju7943;txt;01
-7944;txt;01
-&Aktiviraj Licencu
-.
-
-7945;txt;01
-Va7946;txt;01
-Hvala Vam 7951;txt;01
-7952;txt;01
-Molim vas posjetite Sandboxie web stranicu na linku ispod radi narud7961;txt;01
-Obri7962;txt;01
-Jeste li sigurni da 7971;txt;01
-Ovo nije valjani Klju7972;txt;01
-Ovo nije valjani System Code.
-.
-
-7973;txt;01
-Ovo nije valjani Activation Key.  [%2]
-.
-
-7974;txt;01
-Pogre7975;txt;01
-Aktivacij produkta neuspje7976;txt;01
-7977;txt;01
-Ako 7978;txt;01
-Trenutni datum (%2) je stariji od datuma poslanog od Licencnog Servera (%3).
-.
-
-7982;txt;01
-Licencni Server nije odredio razlog neuspjela aktivacije.
-.
-
-7983;txt;01
-Klju7984;txt;01
-Klju7985;txt;01
-Klju7986;txt;01
-Klju7987;txt;01
-Klju
+Za ga7866;txt;01
+Na 64-bitnim Windows sistemima, trebali bi ste omogu
 

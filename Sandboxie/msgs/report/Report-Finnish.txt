@@ -98,6 +98,10 @@ Getting Started &Tutorial
 &Sandboxie Forum (Web)
 .
 
+3458;txt;01
+Allow direct access to Windows Font Cache
+.
+
 3459;txt;01
 Allow direct access to qWave driver (Google Hangouts)
 .
@@ -112,6 +116,14 @@ Upgrade to Sandboxie-Plus
 
 3484;txt;01
 Resource Access
+.
+
+3950;txt;01
+Print Spooler
+.
+
+3951;txt;01
+The Windows Print Spooler runs outside of Sandboxie's supervision.  A sandboxed application that requests the Print Spooler print to a file will be blocked, because this file will be written outside the sandbox.
 .
 
 3955;txt;01
@@ -334,14 +346,6 @@ The default settings in Sandboxie provide full protection, but you may wish to r
 * Extraneous Messages in Text-Finnish-1035.txt
 *==========
 
-1109;evt;err;01
-SBIE1109 Kelvoton lisenssitieto:  %2
-.
-
-1202;pop;err;01
-SBIE1202 Ei voi päivittää lisenssitietoa:  %2
-.
-
 1214;pop;err;01
 SBIE1214 Ei voi injektoida SbieDll %2
 .
@@ -366,16 +370,8 @@ SBIE1223 Ei voi korvata tunnistetta:  %2
 SBIE1224 Ei voi tiedustella tunnistetta:  %2
 .
 
-1303;pop;inf;01
-SBIE1303 Vain yksi hiekkalaatikko kerrallaan voi olla aktiivi
-.
-
 1304;pop;inf;01
 SBIE1304 Estettiin jäljitelty näppäimistö- tai hiirisyöte prosessista '%2'
-.
-
-1310;pop;inf;01
-SBIE1310 Lisäominaisuudet on estetty kunnes lisenssi on uudelleenaktivoitu
 .
 
 1311;pop;inf;01
@@ -438,42 +434,6 @@ SBIE9253 Porttisäikeen luonti epäonnistui
 Versioristiriita Sandboxiessa. Yritä asentaa uudelleen.
 .
 
-3231;txt;01
-Olet asentanut Sandboxien yli 30 päivää sitten.
-.
-
-3233;txt;01
-Ilmainen versio kuitenkin pysähtyy nyt muutamaksi sekunniksi.
-.
-
-3234;txt;01
-Ilmainen versio sallii yhden laatikon käytön kerrallaan.
-.
-
-3235;txt;01
-Tämä rajoitus on poistettu Sandboxien maksullisessa versiossa.
-.
-
-3236;txt;01
-Maksullinen versio mahdollistaa myös valittujen ohjelmien automaattisen laatikoinnin.
-.
-
-3237;txt;01
-Lisää tietoa ja ohjeet ohjelman ostoon saat valitsemalla seuraavan linkin:
-.
-
-3238;txt;01
-Odota vielä %2 sekuntia
-.
-
-3239;txt;01
-Sulje tämä ikkuna ja jatka
-.
-
-3240;txt;01
-Sulje tämä ikkuna ja lopeta
-.
-
 3321;txt;01
   -  Kirjautumisistunto on hiekkalaatikoitu
 .
@@ -494,10 +454,6 @@ Kokeellinen Suojaustila (64-bittinen)
 
 3453;txt;01
 &Aloitusohjeet (Web)
-.
-
-3455;txt;01
-&Rekisteröi Sandboxie
 .
 
 3488;txt;01
@@ -550,10 +506,6 @@ ole hyvä ja tutustu aloitusohjeisiin.
 &Sandboxien käytön aloitus
 .
 
-3771;txt;01
-(Tämä toiminto on saatavilla vain Sandboxien rekisteröidyssä versiossa.)
-.
-
 3774;txt;02
 Haluatko varmasti asettaa tämän pakotetuksi käyttäjäksi: %2
 .
@@ -604,14 +556,6 @@ Salli tämän hiekkalaatikon ohjelmien muuttaa työpöydän taustakuvaa ja muita järj
 Salli tämän hiekkalaatikon ohjelmien muokata laitteistohallintaa
 .
 
-3952;txt;01
-Pääsy laitteistoon
-.
-
-3953;txt;01
-Salli tämän hiekkalaation ohjelmien muuttaa käyttäjän salasanaa
-.
-
 3954;txt;01
 Salli ohjelmien muokata verkko- ja palomuuriasetuksia
 .
@@ -626,176 +570,6 @@ Aktivoidaksesi laajennetun suojauksen 64-bittiselle Windowsille, käytä Asetukset
 
 5105;txt;01
 Lisää &käyttäjä
-.
-
-7901;txt;01
-Sandboxie Lisenssimanageri
-.
-
-7902;txt;01
-Järjestelmäkoodi %2
-.
-
-7903;txt;01
-Jatkossa aktivoi lisenssi kysymättä
-.
-
-7921;txt;01
-Sandboxie on rekisteröity ja lisenssi on aktivoitu.
-.
-
-7922;txt;01
-Sandboxie on rekisteröity mutta lisenssi tulisi nyt uudelleenaktivoida.
-.
-
-7923;txt;01
-Rekisteröimätön versio.  Rekisteröi nyt!
-.
-
-7924;txt;01
-Sandboxien lisenssi tulee uudelleenaktivoida %2 päivän kuluttua.
-.
-
-7925;txt;01
-Sandboxien lisenssi on nyt aktivoitu.
-.
-
-7926;txt;01
-Tuoteavain vanhenee %2.
-.
-
-7927;txt;01
-Tuoteavaimellasi ei ole vanhenemispäivää.
-.
-
-7931;txt;01
-Sandboxiesi on rekisteröity vanhentuneella Rekisteröintiavaimella.
-.
-
-7932;txt;01
-Ole hyvä ja salli Lisenssimanagerin ottaa yhteys Lisenssipalvelimeen ja päivittää vanha Rekisteröintiavaimesi
-uuteen Tuoteavaimeen. Päivitys on ilmainen.
-.
-
-7933;txt;01
-Lisenssipalvelin ei tunnista Rekisteröintiavaintasi.
-.
-
-7934;txt;01
-Jos olet käyttänyt oikeaa Rekisteröintiavainta jonka olet maksanut tai saanut lahjana,
-ole hyvä ja lähetä sähköpostiviesti osoitteeseen:
-.
-
-7935;txt;01
-Uusi Tuoteavaimesi on:
-.
-
-7936;txt;01
-Ole hyvä ja pidä tämä Tuoteavain turvallisessa paikassa tulevaa tarvetta varten. Alla oleva painike kopioi
-Tuoteavaimen leikekirjaan, josta voit liittää sen dokumenttiin ja tulostaa.
-.
-
-7937;txt;01
-&Päivitä Rekisteröintiavain Tuoteavaimeksi
-.
-
-7941;txt;01
-Rekisteröinti suoritetaan kolmannen osapuolen maksupalvelun avulla. Aloita rekisteröinti käymällä Sandboxien kotisivuilla seuraavan linkin kautta.
-.
-
-7942;txt;01
-Aktivoi Sandboxie lisenssi antamalla ostokuitista löytyvä Tuoteavain, ja klikkaa sen jälkeen painiketta.
-.
-
-7943;txt;01
-Haluatko antaa uuden Tuoteavaimen nyt?
-.
-
-7944;txt;01
-&Aktivoi lisenssi
-.
-
-7945;txt;01
-Kopiosi Sandboxiesta on nyt rekisteröity.
-.
-
-7946;txt;01
-Kiitos tuestasi!
-.
-
-7951;txt;01
-Haluatko aktivoida lisenssin nyt?
-.
-
-7952;txt;01
-Ole hyvä ja käytä alla olevaa linkkiä käydäksesi Sandboxien kotisivulla tilaamassa uusi Tuoteavain.
-.
-
-7961;txt;01
-Tyhjennä &lisenssitieto
-.
-
-7962;txt;01
-Haluatko varmasti tyhjentää lisenssitiedon Sandboxiessa?
-
-Voit aktivoida lisenssisi milloin tahansa antamalla Tuoteavaimen.
-.
-
-7971;txt;01
-Tämä ei ole kelvollinen Tuoteavain.
-.
-
-7972;txt;01
-Tämä ei ole kelvollinen Järjestelmäkoodi.
-.
-
-7973;txt;01
-Tämä ei ole kelvollinen Aktivointiavain.  [%2]
-.
-
-7974;txt;01
-Virheellinen vastaus Lisenssipalvelimelta.
-.
-
-7975;txt;01
-Tuoteaktivointi epäonnistui:
-.
-
-7976;txt;01
-Haluatko yrittää uudelleen nyt?
-.
-
-7977;txt;01
-Jos haluat aktivoida Sandboxien tietokoneessa jolla ei ole pääsyä Internetiin,
-ole hyvä ja katso ohjeet Sandboxie Lisensointi UKK:sta (Sandboxie Licensing FAQ) .
-.
-
-7978;txt;01
-Nykyinen päivämäärä (%2) on myöhaisempi kuin Lisensointipalvelimen lähettämä päivämäärä (%3)
-.
-
-7982;txt;01
-Lisensointiserveri ei määritellyt syytä aktivoinnin epäonnistumiselle.
-.
-
-7983;txt;01
-Lisenssipalvelin ei tunnista Tuoteavainta.
-.
-
-7984;txt;01
-Tuoteavainta ei voi käyttää vanhenemispäivän (%2) jälkeen.
-.
-
-7985;txt;01
-Tuoteavain oli aktivoitu liian moneen tietokoneeseen.
-.
-
-7986;txt;01
-Tuoteavain oli hylätty koska se oli julkistettu Internetissä.
-.
-
-7987;txt;01
-Tuoteavain oli hylätty koska tilaus oli peruttu.
 .
 
 

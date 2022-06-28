@@ -66,6 +66,10 @@ Type the name of a program or path to open the following file in the current san
 &Sandboxie Forum (Web)
 .
 
+3458;txt;01
+Allow direct access to Windows Font Cache
+.
+
 3459;txt;01
 Allow direct access to qWave driver (Google Hangouts)
 .
@@ -80,6 +84,22 @@ Upgrade to Sandboxie-Plus
 
 3484;txt;01
 Resource Access
+.
+
+3950;txt;01
+Print Spooler
+.
+
+3951;txt;01
+The Windows Print Spooler runs outside of Sandboxie's supervision.  A sandboxed application that requests the Print Spooler print to a file will be blocked, because this file will be written outside the sandbox.
+.
+
+3952;txt;01
+If you wish to allow the Print Spooler to print to a file, you can enable this setting. It is recommended that you enable this option only when needed.
+.
+
+3953;txt;01
+Allow the Windows Print Spooler to print to file.
 .
 
 3955;txt;01
@@ -226,96 +246,7 @@ The legacy UI of Sandboxie classic does not implement support for this mode of o
 * Extraneous Messages in Text-Czech-1029.txt
 *==========
 
-1109;evt;err;01
-SBIE1109 Neplatné licen1202;pop;err;01
-SBIE1202 Nelze aktualizovat licen1303;pop;inf;01
-SBIE1303 Aktivní m1310;pop;inf;01
-SBIE1310 Roz1311;pop;inf;01
+1311;pop;inf;01
 SBIE1311 Blokován po2334;pop;err;01
-SBIE2334 Nelze na3231;txt;01
-Nainstaloval jste Sandboxie p3233;txt;01
-Nicmén3234;txt;01
-Nicmén3235;txt;01
-Tato omezení v placené verzi Sandboxie nejsou.
-.
-
-3236;txt;01
-Navíc, placená verze dovolí automaticky spou3237;txt;01
-Pro více informací a zakoupení software, prosím klikn3238;txt;01
-Prosím 3239;txt;01
-Klikn3240;txt;01
-Klikn3455;txt;01
-&Registr Sandboxie
-.
-
-3771;txt;01
-(Tato funkce je dostupná pouze v registrované verzi Sandboxie)
-.
-
-7901;txt;01
-Sandboxie licen7902;txt;01
-Systémový kód %2
-.
-
-7903;txt;01
-V budoucnu aktivovat licenci bez dotazu.
-.
-
-7921;txt;01
-Sandboxie je registrován a licence je aktivována.
-.
-
-7922;txt;01
-Sandboxie je registrován, nyní by m7923;txt;01
-Neregistrovaná kopie. Zaregistrujte se je7924;txt;01
-Licence pro Sandboxie bude muset být obnovena za %2 dní.
-.
-
-7925;txt;01
-Licence pro Sandboxie je nyní aktivována.
-.
-
-7926;txt;01
-Datum ukon7927;txt;01
-Va7931;txt;01
-Va7932;txt;01
-Povolte prosím licen7933;txt;01
-Vá7934;txt;01
-Pokud jste pou7935;txt;01
-Vá7936;txt;01
-Uschovejte prosím tento produktový klí7937;txt;01
-&Upgrade registra7941;txt;01
-Registrace Sandboxie je vyrobena p7942;txt;01
-Pro aktivaci licence Sandboxie zadejte produktový klí7943;txt;01
-P7944;txt;01
-&Aktivace licence
-.
-
-7945;txt;01
-Va7946;txt;01
-D7951;txt;01
-P7952;txt;01
-Nav7961;txt;01
-Vymazat licen7962;txt;01
-Chcete opravdu v Sandboxie vymazat licen7971;txt;01
-Neplatný produktový klí7972;txt;01
-Neplatný kód systému.
-.
-
-7973;txt;01
-Neplatný aktiva7974;txt;01
-Neplatná odpov7975;txt;01
-Aktivace se nezda7976;txt;01
-Chcete to nyní zkusit znovu?
-.
-
-7977;txt;01
-Pokud pot7978;txt;01
-Aktuální datum (%2) je star7982;txt;01
-Licen7983;txt;01
-Produktové 7984;txt;01
-Produktové 7985;txt;01
-Produktové 7986;txt;01
-Produktové 7987;txt;01
-Produktové 
+SBIE2334 Nelze na
 
