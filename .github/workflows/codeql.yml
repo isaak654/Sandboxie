@@ -5,10 +5,9 @@ on:
     branches: [ 'master' ]
     paths-ignore:
       - 'LICENSE'
+      - 'SandboxiePlus/QtSingleApp/doc/**'
       - '**/*.md'
       - '**/*.txt'
-      - '**/*.html'
-      - '**/*.css'
       - '**/*.ini'
       - '**/*.yml'
       - '**/*.ts'
@@ -24,10 +23,9 @@ on:
     branches: [ 'master' ]
     paths-ignore:
       - 'LICENSE'
+      - 'SandboxiePlus/QtSingleApp/doc/**'
       - '**/*.md'
       - '**/*.txt'
-      - '**/*.html'
-      - '**/*.css'
       - '**/*.ini'
       - '**/*.yml'
       - '**/*.ts'
