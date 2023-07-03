@@ -1,5 +1,5 @@
 #pragma once
-
+ 
 #define VERSION_MJR		1
 #define VERSION_MIN 	10
 #define VERSION_REV 	0
