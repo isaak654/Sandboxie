@@ -11,7 +11,7 @@
 #include <QtConcurrent>
 #include "../MiscHelpers/Archive/Archive.h"
 
-
+ 
 #include <Windows.h>
 
 CAddonManager::CAddonManager(QObject* parent)
