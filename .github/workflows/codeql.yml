@@ -3,33 +3,10 @@ name: "CodeQL"
 on:
   push:
     branches: [ 'master' ]
-    paths-ignore:
-      - '.github/images/**'
-      - '.editorconfig'
-      - '.gitattributes'
-      - '.gitignore'
-      - '**/LICENSE'
-      - 'Sandboxie/apps/res/**'
-      - 'SandboxiePlus/SandMan/Resources/**'
-      - 'SandboxiePlus/QtSingleApp/doc/**'
-      - '**/*.def'
-      - '**/*.manifest'
-      - '**/*.md'
-      - '**/*.txt'
-      - '**/*.pri'
-      - '**/*.pro'
-      - '**/*.props'
-      - '**/*.rc'
-      - '**/*.ini'
-      - '**/*.yml'
-      - '**/*.ts'
-      - '**/*.ui'
-      - '**/*.iss'
-      - '**/*.isl'
-      - '**/*.nsh'
-      - '**/*.nsi'
-      - '**/*.bat'
-      - '**/*.cmd'
+    paths:
+      - '**/*.c'
+      - '**/*.cpp'
+      - '**/*.h'
   pull_request:
     # The branches below must be a subset of the branches above.
     branches: [ 'master' ]
