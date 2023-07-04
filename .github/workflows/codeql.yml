@@ -19,9 +19,9 @@ on:
 
 jobs:
   analyze:
+    if: ${{ !contains(github.event.head_commit.message, 'typo') }}
     name: Analyze
     runs-on: windows-2019
-    if: ${{ !contains(github.event.head_commit.message, 'typo') }}
     timeout-minutes: 45
 
     permissions:
