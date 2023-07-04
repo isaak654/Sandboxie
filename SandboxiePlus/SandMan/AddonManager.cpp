@@ -55,7 +55,7 @@ void CAddonManager::OnUpdateData(const QVariantMap& Data, const QVariantMap& Par
 	LoadAddons();
 	emit DataUpdated();
 }
-
+ 
 QList<CAddonPtr> CAddonManager::GetAddons() 
 {
 	if (m_Addons.isEmpty()) {
