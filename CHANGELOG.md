@@ -21,6 +21,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - [SbieHide.dll](https://github.com/VeroFess/SbieHide) - a third-party DLL to hide SbieDll.dll
   - [LogAPI.dll](https://bsa.isoftware.nl/) - an API logging library used for Buster Sandbox Analyzer
 - added option to set the update interval to 1, 7, 14 and 30 days
+- added option to hide Sandboxie's own processes [#3054](https://github.com/sandboxie-plus/Sandboxie/issues/3054)
+- hide sandboxie's
 
 ### Changed
 - setup wizard has now a dedicated update configuration page
