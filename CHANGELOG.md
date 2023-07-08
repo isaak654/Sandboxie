@@ -24,6 +24,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - added option to hide Sandboxie's own processes [#3054](https://github.com/sandboxie-plus/Sandboxie/issues/3054)
 - hide sandboxie's
 -  { id: 'process', name: tr('Name affected process'), type: 'edit', hint: 'Program.exe when applicable' },
+sandboxies
 
 ### Changed
 - setup wizard has now a dedicated update configuration page
