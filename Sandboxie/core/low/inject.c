@@ -46,7 +46,7 @@ void* Hook_GetFFSTarget(UCHAR* SourceFunc);
 #endif
 
 static void InitInjectWow64(SBIELOW_DATA *data);
-
+  
 //---------------------------------------------------------------------------
 
 
