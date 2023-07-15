@@ -23,7 +23,7 @@
 #include <ntstatus.h>
 #define WIN32_NO_STATUS
 typedef long NTSTATUS;
-
+ 
 #include <windows.h>
 #include "common/win32_ntddk.h"
 #include "common/defines.h"
