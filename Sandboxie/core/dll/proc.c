@@ -1687,6 +1687,18 @@ _FX BOOL Proc_AlternateCreateProcess(
         SbieApi_MonitorPutMsg(MONITOR_OTHER, L"Blocked start of smartscreen.exe");
         return TRUE;        // exit CreateProcessInternal
     }
+    if (Dll_ImageType == DLL_IMAGE_SANDBOXIE_DCOMLAUNCH && lpCommandLine
+        && wcsstr(lpCommandLine, L"bdtrackersnmh.exe")) {
+
+        SbieApi_MonitorPutMsg(MONITOR_OTHER, L"Blocked start of bdtrackersnmh.exe");
+        return TRUE;        // exit CreateProcessInternal
+    }
+    if (Dll_ImageType == DLL_IMAGE_SANDBOXIE_DCOMLAUNCH && lpCommandLine
+        && wcsstr(lpCommandLine, L"bdwtxcr.exe")) {
+
+        SbieApi_MonitorPutMsg(MONITOR_OTHER, L"Blocked start of bdwtxcr.exe");
+        return TRUE;        // exit CreateProcessInternal
+    }
     return FALSE;           // continue with CreateProcessInternal
 }
 
