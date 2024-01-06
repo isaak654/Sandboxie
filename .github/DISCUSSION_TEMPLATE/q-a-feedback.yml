@@ -14,7 +14,7 @@ body:
           required: true
         - label: "I have already searched the other [support channels](https://github.com/sandboxie-plus/Sandboxie/discussions/1768#discussioncomment-2503401)."
           required: true
-        - label: "I have already searched the [cached copy](https://github.com/Sandboxie-Website-Archive/sandboxie-website-archive.github.io) of the old Sandboxie forum: &nbps;&nbps;&nbps;&nbps;`site:https://sandboxie-website-archive.github.io/www.sandboxie.com/old-forums/`"
+        - label: "I have already searched the [cached copy](https://github.com/Sandboxie-Website-Archive/sandboxie-website-archive.github.io) of the old Sandboxie forum: `site:https://sandboxie-website-archive.github.io/www.sandboxie.com/old-forums/`"
           required: true
         - label: "I have already searched the [contributing guidelines](https://github.com/sandboxie-plus/Sandboxie/blob/master/CONTRIBUTING.md)."
           required: true
