@@ -8,7 +8,7 @@ body:
       options:
         - label: "I have added a very descriptive title here."
           required: true
-        - label: "I have used the GitHub search bar to find a similar question and didn't find it."
+        - label: "I have used the GitHub search bar to find a similar subject and didn't find it."
           required: true
         - label: "I have already searched the [sandboxie-docs](https://github.com/sandboxie-plus/sandboxie-docs) repository (currently there are [synchronization issues](https://github.com/sandboxie-plus/Sandboxie/discussions/1756) with sandboxie-plus.com)."
           required: true
@@ -18,5 +18,14 @@ body:
           required: true
         - label: "I have already searched the [contributing guidelines](https://github.com/sandboxie-plus/Sandboxie/blob/master/CONTRIBUTING.md)."
           required: true
-        - label: "I understand that problem reports may require a [new issue](https://github.com/sandboxie-plus/Sandboxie/issues/new/choose) with more details to be provided."
+        - label: "I understand that problem reports usually require a [new issue](https://github.com/sandboxie-plus/Sandboxie/issues/new/choose) with more details to be provided."
           required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: General
+      description: |
+        Anything and everything relevant to the project (not belonging to other categories).
+    validations:
+      required: true
