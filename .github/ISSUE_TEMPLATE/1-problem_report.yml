@@ -46,78 +46,6 @@ body:
     validations:
       required: true
   - type: input
-    id: windows-version
-    attributes:
-      label: What is your Windows edition and version?
-      placeholder: "e.g. Windows 10 Pro 22H2 64-bit"
-    validations:
-      required: true
-  - type: dropdown
-    id: user-account
-    attributes:
-      label: "In which Windows account you have this problem?"
-      description: "Please note that built-in user accounts like Guest or Administrator are disabled by default in Windows because they pose a security risk."
-      multiple: true
-      options:
-        - "A local account (Standard user)."
-        - "A local account (Administrator)."
-        - "A Microsoft account (Standard user)."
-        - "A Microsoft account (Administrator)."
-        - "An account with secure desktop turned off for UAC prompts."
-        - "An account with UAC protection completely turned off."
-        - "An account with UAC protection set to Always notify."
-        - "I use the built-in Administrator account."
-        - "I use the built-in Administrator with Admin Approval Mode turned on."
-        - "I reproduced it under a Guest account."
-        - "Not relevant to my request."
-    validations:
-      required: true
-  - type: input
-    id: security-software
-    attributes:
-      label: Please mention any installed security software
-      description: |
-        Please note that third-party security solutions can still conflict even when their real-time protection is turned off, so you may want to consider a temporary uninstall with reboot to rule out any issue with Sandboxie. See also: [Reporting issues to third-party vendors in case of evident conflicts](https://github.com/sandboxie-plus/Sandboxie/issues/2025#issuecomment-1200110235).
-      placeholder: e.g. Microsoft Defender Antivirus
-    validations:
-      required: true
-  - type: textarea
-    id: policy-settings
-    attributes:
-      label: Did you previously enable some security policy settings outside Sandboxie?
-      description: |
-        For example in gpedit.msc, secpol.msc, Windows Defender Exploit protection settings, management tools like parental controls, Microsoft Intune, etc.
-
-        Tip: You may consider to turn off non-default Windows settings.
-      placeholder: |
-        e.g. I enabled the following security / policy settings outside Sandboxie:
-        ....
-  - type: input
-    id: sandboxie-version
-    attributes:
-      label: What version of Sandboxie are you running now?
-      placeholder: e.g. Sandboxie Plus 1.12.6 64-bit
-    validations:
-      required: true
-  - type: dropdown
-    id: installation-types
-    attributes:
-      label: Is it a new installation of Sandboxie?
-      options:
-        - "I recently did a new clean installation."
-        - "I just updated Sandboxie from a previous version (I don't remember which one)."
-        - "I just updated Sandboxie from a previous version (I remember which one it is)."
-        - "I recently upgraded it from an older version than 1.5.3 / 5.60.3."
-        - "I have been using the same version for some time."
-    validations:
-      required: true
-  - type: input
-    id: regression
-    attributes:
-      label: Is it a regression from previous versions?
-      description: If you intend to test multiple versions, specify in which Sandboxie version this problem was introduced the first time (including any pre-release version).
-      placeholder: e.g. The issue was introduced the first time in 5.62.1 64-bit
-  - type: input
     id: sandboxed-program
     attributes:
       label: Affected program
@@ -185,6 +113,31 @@ body:
 
         Tip: You can upload the .dmp file(s) on a file storage service, then share the resulting link below.
       placeholder: https://
+  - type: input
+    id: sandboxie-version
+    attributes:
+      label: What version of Sandboxie are you running now?
+      placeholder: e.g. Sandboxie Plus 1.12.6 64-bit
+    validations:
+      required: true
+  - type: dropdown
+    id: installation-types
+    attributes:
+      label: Is it a new installation of Sandboxie?
+      options:
+        - "I recently did a new clean installation."
+        - "I just updated Sandboxie from a previous version (I don't remember which one)."
+        - "I just updated Sandboxie from a previous version (I remember which one it is)."
+        - "I recently upgraded it from an older version than 1.5.3 / 5.60.3."
+        - "I have been using the same version for some time."
+    validations:
+      required: true
+  - type: input
+    id: regression
+    attributes:
+      label: Is it a regression from previous versions?
+      description: If you intend to test multiple versions, specify in which Sandboxie version this problem was introduced the first time (including any pre-release version).
+      placeholder: e.g. The issue was introduced the first time in 5.62.1 64-bit
   - type: dropdown
     id: box-types
     attributes:
@@ -217,6 +170,53 @@ body:
       - "Not relevant to my request."
     validations:
       required: true
+  - type: input
+    id: windows-version
+    attributes:
+      label: What is your Windows edition and version?
+      placeholder: "e.g. Windows 10 Pro 22H2 64-bit"
+    validations:
+      required: true
+  - type: dropdown
+    id: user-account
+    attributes:
+      label: "In which Windows account you have this problem?"
+      description: "Please note that built-in user accounts like Guest or Administrator are disabled by default in Windows because they pose a security risk."
+      multiple: true
+      options:
+        - "A local account (Standard user)."
+        - "A local account (Administrator)."
+        - "A Microsoft account (Standard user)."
+        - "A Microsoft account (Administrator)."
+        - "An account with secure desktop turned off for UAC prompts."
+        - "An account with UAC protection completely turned off."
+        - "An account with UAC protection set to Always notify."
+        - "I use the built-in Administrator account."
+        - "I use the built-in Administrator with Admin Approval Mode turned on."
+        - "I reproduced it under a Guest account."
+        - "Not relevant to my request."
+    validations:
+      required: true
+  - type: input
+    id: security-software
+    attributes:
+      label: Please mention any installed security software
+      description: |
+        Please note that third-party security solutions can still conflict even when their real-time protection is turned off, so you may want to consider a temporary uninstall with reboot to rule out any issue with Sandboxie. See also: [Reporting issues to third-party vendors in case of evident conflicts](https://github.com/sandboxie-plus/Sandboxie/issues/2025#issuecomment-1200110235).
+      placeholder: e.g. Microsoft Defender Antivirus
+    validations:
+      required: true
+  - type: textarea
+    id: policy-settings
+    attributes:
+      label: Did you previously enable some security policy settings outside Sandboxie?
+      description: |
+        For example in gpedit.msc, secpol.msc, Windows Defender Exploit protection settings, management tools like parental controls, Microsoft Intune, etc.
+
+        Tip: You may consider to turn off non-default Windows settings.
+      placeholder: |
+        e.g. I enabled the following security / policy settings outside Sandboxie:
+        ....
   - type: input
     id: logs
     attributes:
