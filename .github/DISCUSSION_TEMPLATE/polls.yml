@@ -10,7 +10,7 @@ body:
           required: true
         - label: "I have used the GitHub search bar to find a similar question and didn't find it."
           required: true
-        - label: "I have already searched the [sandboxie-docs](https://github.com/sandboxie-plus/sandboxie-docs) repository (currently there are [synchronization issues](https://github.com/sandboxie-plus/Sandboxie/discussions/1756#discussioncomment-3780799) with sandboxie-plus.com)."
+        - label: "I have already searched the [sandboxie-docs](https://github.com/sandboxie-plus/sandboxie-docs) repository (currently there are [synchronization issues](https://github.com/sandboxie-plus/Sandboxie/discussions/1756) with sandboxie-plus.com)."
           required: true
         - label: "I have already searched the other [support channels](https://github.com/sandboxie-plus/Sandboxie/discussions/1768#discussioncomment-2503401)."
           required: true
