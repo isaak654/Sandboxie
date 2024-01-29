@@ -17,8 +17,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           transform: |
-            (?<=Copyright 2020 - )(?<from>\d{4})?-?(\d{4})?
-            (?<=Copyright (C) 2020 )(?<from>\d{4})?-?(\d{4})?
+            '(?<=Copyright 2020 - )(?<from>\d{4})?-?(\d{4})?',
+            '(?<=Copyright (C) 2020)(?<from>\d{4})?-?(\d{4})?'
           path: |            
             LICENSE.Classic
             LICENSE.Plus
