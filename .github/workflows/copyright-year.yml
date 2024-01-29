@@ -16,7 +16,7 @@ jobs:
       - uses: FantasticFiasco/action-update-license-year@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          transform: (?<=Copyright 2020 - 2023 )(?<from>\d{4})? - ?(\d{4})?
+          transform: (?<=Copyright 2020 )(?<from>\d{4})?-?(\d{4})?
           path: |
             LICENSE.Plus
             Sandboxie/**/LICENSE.TXT
