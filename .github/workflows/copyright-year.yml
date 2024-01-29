@@ -22,7 +22,6 @@ jobs:
             Sandboxie/**/LICENSE.TXT
             SandboxiePlus/**/LICENSE
             Installer/license.txt
-            Sandboxie/COPYING
             *.h
             *.rc
             *.c
@@ -38,6 +37,6 @@ jobs:
       - uses: FantasticFiasco/action-update-license-year@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          transform: (?<=Copyright (C) 2020-)(?<from>\d{4})?-?(\d{4})?
+          transform: (?<=Copyright (C) 2020- )(?<from>\d{4})?-?(\d{4})?
           path: |
             Installer/Sandboxie-Plus.iss
