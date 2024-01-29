@@ -16,3 +16,17 @@ jobs:
       - uses: FantasticFiasco/action-update-license-year@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          path: |            
+            *LICENSE
+            LICENSE.Classic
+            LICENSE.Plus
+            *LICENSE.TXT
+            *license.txt
+            *Sandboxie-Plus.iss
+            *COPYING
+            *.h
+            *.rc
+            *.c
+            *.cpp
+            *.asm
+            
