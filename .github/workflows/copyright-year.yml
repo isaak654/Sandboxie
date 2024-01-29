@@ -17,16 +17,16 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           path: |            
-            LICENSE.Classic
-            LICENSE.Plus
-            Sandboxie/**/LICENSE.TXT
-            SandboxiePlus/**/LICENSE
-            Installer/license.txt
-            Installer/Sandboxie-Plus.iss
-            Sandboxie/COPYING
-            *.h
-            *.rc
-            *.c
-            *.cpp
-            *.asm
+            "LICENSE.Classic"
+            "LICENSE.Plus"
+            "Sandboxie/**/LICENSE.TXT"
+            "SandboxiePlus/**/LICENSE"
+            "Installer/license.txt"
+            "Installer/Sandboxie-Plus.iss"
+            "Sandboxie/COPYING"
+            "*.h"
+            "*.rc"
+            "*.c"
+            "*.cpp"
+            "*.asm"
             
