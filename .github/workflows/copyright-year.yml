@@ -25,7 +25,17 @@ jobs:
             *.rc
             *.c
             *.cpp
-            *.asm
-            Installer/Sandboxie-Plus.iss
+            *.asm      
 
-            
+  update-license-year-2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: FantasticFiasco/action-update-license-year@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          transform: (?<=Copyright (C) 2020- )(?<from>\d{4})?-?(\d{4})?
+          path: |
+            Installer/Sandboxie-Plus.iss
