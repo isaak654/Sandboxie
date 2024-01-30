@@ -22,6 +22,11 @@ jobs:
             Sandboxie/**/LICENSE.TXT
             Installer/license.txt
             SandboxiePlus/SandMan/LICENSE
+            Sandboxie/core/svc/ProcessServer.h
+            Sandboxie/core/drv/my_fltkernel.h
+            Sandboxie/core/drv/hook.h
+            Sandboxie/apps/com/header.h
+            Sandboxie/core/drv/log_buff.h
 
   update-license-year-2:
     needs: update-license-year-1
@@ -33,11 +38,11 @@ jobs:
       - uses: FantasticFiasco/action-update-license-year@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          transform: (?<=Copyright )(?<from>\d{4})?-?(\d{4})?
           path: |
             Installer/Sandboxie-Plus.iss
-            Sandboxie/**/**/*.h
-            Sandboxie/msgs/resource.rc
+            Sandboxie/core/drv/api_flags.h
+            SandboxiePlus/QSbieAPI/SbieTrace.h
+            Sandboxie/core/svc/msgids.h
             Sandboxie/**/**/*.cpp
             Sandboxie/**/**/*.asm
             Sandboxie/**/**/*.c
