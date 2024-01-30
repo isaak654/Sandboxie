@@ -24,8 +24,6 @@ jobs:
             SandboxiePlus/SandMan/LICENSE
             Sandboxie/core/svc/ProcessServer.h
             Sandboxie/core/drv/my_fltkernel.h
-            Sandboxie/core/drv/hook.h
-            Sandboxie/core/drv/log_buff.h
 
   update-license-year-2:
     needs: update-license-year-1
@@ -63,3 +61,5 @@ jobs:
           transform: (?<=Copyright )(?<from>2020)?)?
           path: |
             Sandboxie/apps/com/header.h
+            Sandboxie/core/drv/hook.h
+            Sandboxie/core/drv/log_buff.h
