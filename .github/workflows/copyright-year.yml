@@ -38,13 +38,13 @@ jobs:
             Sandboxie/core/drv/api_flags.h
             SandboxiePlus/QSbieAPI/SbieTrace.h
             Sandboxie/core/svc/msgids.h
-            Sandboxie/**/**/*.cpp
-            Sandboxie/**/**/*.asm
-            Sandboxie/**/**/*.c
-            SandboxiePlus/**/**/*.cpp
-            SandboxiePlus/**/**/*.h
-            SandboxieTools/**/*.cpp
-            SandboxieTools/**/*.h
+            # Sandboxie/**/**/*.cpp
+            # Sandboxie/**/**/*.asm
+            # Sandboxie/**/**/*.c
+            # SandboxiePlus/**/**/*.cpp
+            # SandboxiePlus/**/**/*.h
+            # SandboxieTools/**/*.cpp
+            # SandboxieTools/**/*.h
 
   update-license-year-3:
     needs: update-license-year-2
