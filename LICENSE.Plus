@@ -1,4 +1,4 @@
-Copyright 2020 - 2023 David Xanatos (xanasoft.com)
+Copyright 2020-2024 David Xanatos (xanasoft.com)
 
 Sandboxie-Plus can be used under the following restrictions and obligations:
 
@@ -62,3 +62,4 @@ Sandboxie-Plus is made up of the following components, governed under various li
 * The Qt Framework, is licensed under the LGPL.
 * UglobalHotkey is an extension for Qt framework, which implements global hotkeys functionality and is in the Public Domain.
 * QtSingleApp is a Qt Solutions component that provides support for applications that can be only started once per user, BSD-licensed.
+.
