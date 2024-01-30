@@ -49,7 +49,7 @@ jobs:
       - uses: FantasticFiasco/action-update-license-year@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          transform: (?<=Copyright )(?<from>2020)?)?
+          transform: (?<=Copyright )(?<from>2020)?
           path: |
             Sandboxie/apps/com/header.h
             Sandboxie/core/drv/hook.h
