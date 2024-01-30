@@ -22,8 +22,6 @@ jobs:
             Sandboxie/**/LICENSE.TXT
             Installer/license.txt
             SandboxiePlus/SandMan/LICENSE
-            Sandboxie/core/svc/ProcessServer.h
-            Sandboxie/core/drv/my_fltkernel.h
 
   update-license-year-2:
     needs: update-license-year-1
@@ -63,3 +61,5 @@ jobs:
             Sandboxie/apps/com/header.h
             Sandboxie/core/drv/hook.h
             Sandboxie/core/drv/log_buff.h
+            Sandboxie/core/svc/ProcessServer.h
+            Sandboxie/core/drv/my_fltkernel.h
