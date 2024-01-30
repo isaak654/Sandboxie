@@ -20,6 +20,8 @@ jobs:
           path: |
             LICENSE.Plus
             Sandboxie/**/LICENSE.TXT
+            Installer/license.txt
+            SandboxiePlus/SandMan/LICENSE
 
   update-license-year-2:
     needs: update-license-year-1
@@ -33,30 +35,14 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           path: |
             Installer/Sandboxie-Plus.iss
-            Sandboxie/**/*.h
             Sandboxie/**/**/*.h
-            Sandboxie/**/**/*.rc
+            Sandboxie/msgs/resource.rc
             Sandboxie/**/**/*.cpp
             Sandboxie/**/**/*.asm
             Sandboxie/**/**/*.c
-            SandboxiePlus/**/*.cpp
             SandboxiePlus/**/**/*.cpp
-            SandboxiePlus/**/*.h
             SandboxiePlus/**/**/*.h
             SandboxieTools/**/*.cpp
             SandboxieTools/**/*.h
 
-  update-license-year-3:
-    needs: update-license-year-2
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: FantasticFiasco/action-update-license-year@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          transform: (?<=Copyright )(?<from>\d{4})? - ?(\d{4})?
-          path: |
-            Installer/license.txt
-            SandboxiePlus/SandMan/LICENSE
+
