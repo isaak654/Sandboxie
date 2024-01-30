@@ -36,3 +36,15 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           path: |
             Installer/Sandboxie-Plus.iss
+
+  update-license-year-3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: FantasticFiasco/action-update-license-year@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: |
+            Installer/license.txt
