@@ -7,7 +7,17 @@ on:
     branches: [ master ]
     paths-ignore:
       - '**/*.md'
+      - '.editorconfig'
+      - '**/LICENSE*'
+      - '**/Sandboxie.ini'
+      - '**/Sandboxie-Plus.ini'
+      - '**/COPYING'
+      - '**/*.html'
+      - '**/*.txt'
       - '**/*.yml'
+      - '**/*.png'
+      - '**/*.bmp'
+
   pull_request:
     branches: [ master ]
 
