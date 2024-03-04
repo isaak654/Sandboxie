@@ -6,10 +6,10 @@ on:
   push:
     branches: [ master ]
     paths:
+      - '!**/*.txt'
       - '**/Manifest*.txt'
       - '**/Text-*-*.txt'
       - '**/Sbie-English-1033.txt'
-      - '!**/*.txt'
       - '!**/*.md'
       - '!.editorconfig'
       - '!**/LICENSE*'
