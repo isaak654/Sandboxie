@@ -9,6 +9,8 @@ on:
       # Exclude file path patterns
       - '!**/*.md'
       - '!.editorconfig'
+      - '!.gitattributes'
+      - '!.gitignore'
       - '!**/LICENSE*'
       - '!**/Sandboxie.ini'
       - '!**/Sandboxie-Plus.ini'
