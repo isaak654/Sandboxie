@@ -21,6 +21,7 @@ on:
       - '!**/*.txt'
       - '!**/*.yml'
       - '!**/*.isl'
+      - '!**/lang_*.json'
       # Include file path patterns
       - '**/main.yml'
       - '**/Manifest*.txt'
