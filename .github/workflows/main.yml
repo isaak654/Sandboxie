@@ -5,18 +5,20 @@ on:
 
   push:
     branches: [ master ]
-    paths-ignore:
-      - '**/*.md'
-      - '.editorconfig'
-      - '**/LICENSE*'
-      - '**/Sandboxie.ini'
-      - '**/Sandboxie-Plus.ini'
-      - '**/COPYING'
-      - '**/*.html'
-      - '**/*.txt'
-      - '**/*.yml'
-      - '**/*.png'
-      - '**/*.bmp'
+    paths:
+      - '**/Manifest*.txt'
+      - '**/Text-*-*.txt'
+      - '**/Sbie-English-1033.txt'
+      - '!**/*.txt'
+      - '!**/*.md'
+      - '!.editorconfig'
+      - '!**/LICENSE*'
+      - '!**/Sandboxie.ini'
+      - '!**/Sandboxie-Plus.ini'
+      - '!**/COPYING'
+      - '!**/*.html'
+      - '!**/*.png'
+      - '!**/*.bmp'
 
   pull_request:
     branches: [ master ]
