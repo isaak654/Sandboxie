@@ -6,10 +6,7 @@ on:
   push:
     branches: [ master ]
     paths:
-      - '!**/*.txt'
-      - '**/Manifest*.txt'
-      - '**/Text-*-*.txt'
-      - '**/Sbie-English-1033.txt'
+      # Exclude file path patterns
       - '!**/*.md'
       - '!.editorconfig'
       - '!**/LICENSE*'
@@ -19,7 +16,13 @@ on:
       - '!**/*.html'
       - '!**/*.png'
       - '!**/*.bmp'
-
+      - '!**/*.txt'
+      - '!**/*.yml'
+      # Include file path patterns
+      - '**/main.yml'
+      - '**/Manifest*.txt'
+      - '**/Text-*-*.txt'
+      - '**/Sbie-English-1033.txt'
   pull_request:
     branches: [ master ]
 
