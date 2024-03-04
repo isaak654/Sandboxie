@@ -7,7 +7,7 @@ Sandboxie-Plus can be used under the following restrictions and obligations:
       extend the software permits; however certain functionality
       is only available with a support certificate which
       can be obtained from xanasoft.com
-	  
+	
    2. To use the software commercially a business certificate 
       must be obtained from xanasoft.com; however it is permitted to 
       use the software commercially for a limited period of time
