@@ -3,8 +3,14 @@ name: "CodeQL"
 on:
   workflow_dispatch:
   push:
-    branches: [ 'codeql' ]
+    branches: [ 'master' ]
+    paths:
+      - '**.c'
+      - '**.cpp'
+      - '**.h'
   pull_request:
+    types:
+      - opened
     # The branches below must be a subset of the branches above.
     branches: [ 'master' ]
     paths:
@@ -16,9 +22,10 @@ on:
 
 jobs:
   analyze:
-    name: Analyze ${{ matrix.configuration }}-${{ matrix.platform }}
+    name: Analyze
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     runs-on: windows-2019
-    timeout-minutes: 45
+    timeout-minutes: 60
 
     permissions:
       actions: read
@@ -28,10 +35,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform2: [ Win32, x64 ]
-        include:
-           - platform: x64
-             configuration: SbieRelease
         language: [ 'cpp' ]
         # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
         # Use only 'java' to analyze code written in Java, Kotlin or both.
@@ -39,16 +42,15 @@ jobs:
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
-
-    - name: 'Cleanup build folder'
+    - name: Cleanup build folder
       run: |
-        rm ${{ github.workspace }}\* -r -Force
+        rm -r -Force ${{ github.workspace }}\*
 
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Setup msbuild
-      uses: microsoft/setup-msbuild@v1
+      uses: microsoft/setup-msbuild@v2
 
     # Qt 6 is only required for ARM64 build currently.
     # - name: Install Qt6 x64
@@ -69,7 +71,7 @@ jobs:
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@v2
+      uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
         config-file: ./.github/codeql/codeql-config.yml
@@ -80,19 +82,22 @@ jobs:
         # For more details on CodeQL's query packs, refer to: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
         # queries: security-extended,security-and-quality
 
-    - name: Build Sandboxie
-      run: msbuild /t:build Sandboxie\Sandbox.sln /p:Configuration="SbieRelease" /p:Platform=${{ matrix.platform2 }}
+    - name: Build Sandboxie x86
+      run: msbuild /t:build Sandboxie\Sandbox.sln /p:Configuration="SbieRelease" /p:Platform=Win32 -maxcpucount:8
+
+    - name: Build Sandboxie x64
+      run: msbuild /t:build Sandboxie\Sandbox.sln /p:Configuration="SbieRelease" /p:Platform=x64 -maxcpucount:8
 
     - name: Build Sandboxie-Plus x64
-      run: SandboxiePlus\qmake_plus.cmd ${{ matrix.platform }}
+      run: SandboxiePlus\qmake_plus.cmd x64
 
     - name: Build SbieShell x64
-      run: msbuild /t:restore,build -p:RestorePackagesConfig=true SandboxiePlus\SbieShell\SbieShell.sln /p:Configuration="Release" /p:Platform=${{ matrix.platform }}
+      run: msbuild /t:restore,build -p:RestorePackagesConfig=true SandboxiePlus\SbieShell\SbieShell.sln /p:Configuration="Release" /p:Platform=x64
 
     - name: Build Sandboxie-Tools x64
-      run: msbuild /t:build SandboxieTools\SandboxieTools.sln /p:Configuration="Release" /p:Platform=${{ matrix.platform }}
+      run: msbuild /t:build SandboxieTools\SandboxieTools.sln /p:Configuration="Release" /p:Platform=x64 -maxcpucount:8
 
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v2
+      uses: github/codeql-action/analyze@v3
       with:
         category: "/language:${{matrix.language}}"
