@@ -1,5 +1,5 @@
 INSTALLATION INSTRUCTIONS
- 
+
 These instructions refer to the package you are installing as
 some-package.tar.gz or some-package.zip. The .zip file is intended for use
 on Windows.
