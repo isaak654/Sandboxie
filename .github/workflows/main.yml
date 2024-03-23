@@ -28,10 +28,12 @@ on:
       - '**/*.png'
       - '**/*.bmp'
       - '**/LICENSE*'
+      - '**/license*'
+      - '**/README*'
+      - '**/ReadMe*'
+      - '**/INSTALL*'
+      - '**/AUTHORS'
       - '**/COPYING'
-      - '**/license.txt'
-      - '**/README.txt'
-      - '**/INSTALL.txt'
   pull_request:
     branches: [ master ]
     paths-ignore:
@@ -57,10 +59,12 @@ on:
       - '**/*.png'
       - '**/*.bmp'
       - '**/LICENSE*'
+      - '**/license*'
+      - '**/README*'
+      - '**/ReadMe*'
+      - '**/INSTALL*'
+      - '**/AUTHORS'
       - '**/COPYING'
-      - '**/license.txt'
-      - '**/README.txt'
-      - '**/INSTALL.txt'
 
 jobs:
   Build_x64:
