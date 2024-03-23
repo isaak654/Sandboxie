@@ -5,28 +5,31 @@ on:
 
   push:
     branches: [ master ]
-    paths:
-      # Exclude file path patterns
-      - '!**/*.md'
-      - '!.editorconfig'
-      - '!.gitattributes'
-      - '!.gitignore'
-      - '!**/LICENSE*'
-      - '!**/Sandboxie.ini'
-      - '!**/Sandboxie-Plus.ini'
-      - '!**/COPYING'
-      - '!**/*.html'
-      - '!**/*.png'
-      - '!**/*.bmp'
-      - '!**/*.txt'
-      - '!**/*.yml'
-      - '!**/*.isl'
-      - '!**/lang_*.json'
-      # Include file path patterns
-      - '**/main.yml'
-      - '**/Manifest*.txt'
-      - '**/Text-*-*.txt'
-      - '**/Sbie-English-1033.txt'
+    paths-ignore:
+      - '.editorconfig'
+      - '.gitattributes'
+      - '.gitignore'
+      - 'MergeDbg.cmd'
+      - 'TestCI.cmd'
+      - '.github/codeql/codeql-config.yml'
+      - '.github/ISSUE_TEMPLATE/**.yml'
+      - '.github/workflows/codeql.yml'
+      - '.github/workflows/codespell.yml'
+      - '.github/workflows/lupdate.yml'
+      - '.github/workflows/stale.yml'
+      - '.github/workflows/test.yml'
+      - '.github/workflows/winget.yml'
+      - '.github/FUNDING.yml'
+      - '.github/dependabot.yml'
+      - 'Sandboxie/msgs/report/*.txt'
+      - '**/*.md'
+      - '**/*.html'
+      - '**/*.png'
+      - '**/*.bmp'
+      - '**/LICENSE*'
+      - '**/COPYING'
+      - '**/readme.txt'
+      - '**/install.txt'
   pull_request:
     branches: [ master ]
 
