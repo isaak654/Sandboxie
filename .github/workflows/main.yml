@@ -106,7 +106,7 @@ jobs:
       - name: Install Qt5 x64
         uses: jurplel/install-qt-action@v3
         with:
-          version: '5.15.2'
+          version: '5.15.13'
       #    dir: ..
       #    arch:  ${{ matrix.qt-target }}
           arch:  'win64_msvc2019_64'
@@ -295,7 +295,7 @@ jobs:
       - name: Install Qt5 x86
         uses: jurplel/install-qt-action@v3
         with:
-          version: '5.15.2'
+          version: '5.15.13'
       #    dir: ..
       #    arch:  ${{ matrix.qt-target }}
           arch:  'win32_msvc2019'
