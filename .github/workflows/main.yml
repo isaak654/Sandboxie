@@ -6,7 +6,6 @@ on:
   push:
     branches: [ master ]
     paths-ignore:
-      # Case-sensitive paths to exclude for push events
       - '.editorconfig'
       - '.gitattributes'
       - '.gitignore'
