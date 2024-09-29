@@ -14,7 +14,7 @@ concurrency:
 jobs:
   calculate-hashes:
     runs-on: ubuntu-latest  # Use the latest Ubuntu environment
-    if: github.repository == 'sandboxie-plus/Sandboxie'  # Only run this job if the event is from the specified repository
+    if: github.repository == 'isaak654/Sandboxie'  # Only run this job if the event is from the specified repository
     permissions:
       contents: write  # Allow writing to the repository's contents
 
