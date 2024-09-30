@@ -4,9 +4,9 @@
 
 [![Join our Discord Server](https://img.shields.io/badge/Join-Our%20Discord%20Server%20for%20bugs,%20feedback%20and%20more!-blue?style=for-the-badge&logo=discord)](https://discord.gg/S4tFu6Enne)
 
-|  System requirements  |      Release notes     |     Contribution guidelines   |      Security policy      |      Code of Conduct      |
-|         :---:         |          :---:         |          :---:                |          :---:            |          :---:            |
-| Windows 7 or higher, 32-bit or 64-bit. |  [CHANGELOG.md](./CHANGELOG.md)  |  [CONTRIBUTING.md](./CONTRIBUTING.md)  |   [SECURITY.md](./SECURITY.md)  |  [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)  |
+|  System requirements  |      Release notes     |     Contribution guidelines   |      Security policy      |      Code of Conduct      |      Roadmap      |
+|         :---:         |          :---:         |          :---:                |          :---:            |          :---:            |       :---:       | 
+| Windows 7 or higher, 32-bit or 64-bit. |  [CHANGELOG.md](./CHANGELOG.md)  |  [CONTRIBUTING.md](./CONTRIBUTING.md)  |   [SECURITY.md](./SECURITY.md)  |  [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)  | [ROADMAP](https://www.wilderssecurity.com/threads/sandboxie-roadmap.445545/page-8#post-3187633) |
 
 Sandboxie is a sandbox-based isolation software for 32-bit and 64-bit Windows NT-based operating systems. It creates a sandbox-like isolated operating environment in which applications can be run or installed without permanently modifying local & mapped drives or the Windows registry. An isolated virtual environment allows controlled testing of untrusted programs and web surfing.<br>
 
@@ -126,6 +126,7 @@ If you find Sandboxie useful, then feel free to contribute through our [Contribu
 - lmou523 - Code fixes
 - sredna - Code fixes for Classic installer
 - weihongx9315 - Code fix
+- marti4d - Code fix
 - jorgectf - CodeQL workflow
 - stephtr - CI / Certification
 - yfdyh000 - Localization support for Plus installer
