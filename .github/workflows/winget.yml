@@ -5,6 +5,9 @@ on:
 jobs:
   publish-plus:
     runs-on: windows-latest # action can only be run on Windows
+    concurrency:
+      group: plus-${{ github.event.release.tag_name }}  # Use the release tag name for concurrency
+      cancel-in-progress: true  # Cancel any in-progress runs for the same group
     steps:
       - name: Publish Sandboxie-Plus
         uses: vedantmgoyal9/winget-releaser@main
@@ -15,6 +18,9 @@ jobs:
 
   publish-classic:
     runs-on: windows-latest
+    concurrency:
+      group: classic-${{ github.event.release.tag_name }}  # Use the release tag name for concurrency
+      cancel-in-progress: true  # Cancel any in-progress runs for the same group
     steps:
       - name: Get Sandboxie-Classic version
         id: get_version
