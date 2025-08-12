@@ -89,7 +89,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v5
 
       - name: Load Variables from buildVariables.cmd
         shell: cmd
@@ -196,7 +196,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v5
 
       - name: Load Variables from buildVariables.cmd
         shell: cmd
@@ -301,7 +301,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v5
 
       - name: Setup msbuild
         uses: microsoft/setup-msbuild@v2
@@ -369,7 +369,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v5
 
       - name: Load Variables from buildVariables.cmd
         shell: cmd
