@@ -60,19 +60,19 @@ jobs:
       uses: actions/checkout@v6
 
     - name: Load Variables from buildVariables.cmd
-      if: matrix.language != 'actions'
+      if: matrix.language == 'c-cpp'
       shell: cmd
       run: |
         @echo on
         call "${{ github.workspace }}\Installer\buildVariables.cmd" build_qt6
 
     - name: Setup msbuild
-      if: matrix.language != 'actions'
+      if: matrix.language == 'c-cpp'
       uses: microsoft/setup-msbuild@v3
 
     # Qt 6 is only required for ARM64 build currently.
     - name: Install Qt6 x64
-      if: matrix.language != 'actions'
+      if: matrix.language == 'c-cpp'
       uses: jurplel/install-qt-action@v4
       with:
     #     version: '6.3.1'
@@ -84,7 +84,7 @@ jobs:
 #      run: SandboxiePlus\install_qt.cmd x64
 
     - name: Installing Jom
-      if: matrix.language != 'actions'
+      if: matrix.language == 'c-cpp'
       run: SandboxiePlus\install_jom.cmd
 
     # Initializes the CodeQL tools for scanning.
@@ -102,23 +102,23 @@ jobs:
         # queries: security-extended,security-and-quality
 
     - name: Build Sandboxie x86 (Dll)
-      if: matrix.language != 'actions'
+      if: matrix.language == 'c-cpp'
       run: msbuild /t:build Sandboxie\SandboxDll.sln /p:Configuration="SbieRelease" /p:Platform=Win32 -maxcpucount:8
 
     - name: Build Sandboxie x64
-      if: matrix.language != 'actions'
+      if: matrix.language == 'c-cpp'
       run: msbuild /t:build Sandboxie\Sandbox.sln /p:Configuration="SbieRelease" /p:Platform=x64 -maxcpucount:8
 
     - name: Build Sandboxie-Plus x64
-      if: matrix.language != 'actions'
+      if: matrix.language == 'c-cpp'
       run: SandboxiePlus\qmake_plus.cmd x64 build_qt6
 
     - name: Build SbieShell x64
-      if: matrix.language != 'actions'
+      if: matrix.language == 'c-cpp'
       run: msbuild /t:restore,build -p:RestorePackagesConfig=true SandboxiePlus\SbieShell\SbieShell.sln /p:Configuration="Release" /p:Platform=x64
 
     - name: Build Sandboxie-Tools x64
-      if: matrix.language != 'actions'
+      if: matrix.language == 'c-cpp'
       run: msbuild /t:build SandboxieTools\SandboxieTools.sln /p:Configuration="Release" /p:Platform=x64 -maxcpucount:8
 
     - name: Perform CodeQL Analysis
