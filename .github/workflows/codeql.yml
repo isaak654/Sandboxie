@@ -39,7 +39,7 @@ jobs:
         - language: actions
           build-mode: none
         - language: c-cpp
-          build-mode: manual
+          build-mode: none
         - language: javascript
           build-mode: none
         - language: typescript
@@ -62,7 +62,6 @@ jobs:
       uses: actions/checkout@v6
 
     - name: Load Variables from buildVariables.cmd
-      if: matrix.build-mode == 'manual'
       id: vars
       shell: cmd
       run: |
