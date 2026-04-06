@@ -11,7 +11,6 @@ on:
   pull_request:
     types:
       - opened
-    # The branches below must be a subset of the branches above.
     branches: [ 'master' ]
     paths:
       - '**.c'
@@ -21,10 +20,40 @@ on:
     - cron: '33 7 * * 6'
 
 jobs:
-  analyze:
-    name: Analyze
+  analyze-cpp:
+    name: Analyze (C/C++)
     if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     runs-on: windows-2022
+    timeout-minutes: 60
+
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v6
+
+    - name: Initialize CodeQL (C/C++)
+      uses: github/codeql-action/init@v4
+      with:
+        languages: c-cpp
+        build-mode: autobuild
+        config-file: ./.github/codeql/codeql-config.yml
+
+    - name: Autobuild (C/C++)
+      uses: github/codeql-action/autobuild@v4
+
+    - name: Perform CodeQL Analysis (C/C++)
+      uses: github/codeql-action/analyze@v4
+      with:
+        category: "/language:c-cpp"
+
+  analyze-other:
+    name: Analyze (Actions + JS/TS)
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    runs-on: ubuntu-latest
     timeout-minutes: 60
 
     permissions:
@@ -35,91 +64,19 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include:
-        - language: actions
-          build-mode: none
-        - language: c-cpp
-          build-mode: manual
-        - language: javascript-typescript
-          build-mode: none
-        # CodeQL supports the following values keywords for 'language': 'actions', 'c-cpp', 'csharp', 'go', 'java-kotlin', 'javascript-typescript', 'python', 'ruby', 'rust', 'swift'
-        # Use `c-cpp` to analyze code written in C, C++ or both
-        # Use 'java-kotlin' to analyze code written in Java, Kotlin or both
-        # Use 'javascript-typescript' to analyze code written in JavaScript, TypeScript or both
-        # To learn more about changing the languages that are analyzed or customizing the build mode for your analysis,
-        # see https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/customizing-your-advanced-setup-for-code-scanning.
-        # If you are analyzing a compiled language, you can modify the 'build-mode' for that language to customize how
-        # your codebase is analyzed, see https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/codeql-code-scanning-for-compiled-languages
+        language: [ actions, javascript-typescript ]
 
     steps:
-    - name: Cleanup build folder
-      if: matrix.language == 'c-cpp'
-      shell: pwsh
-      run: |
-        rm -r -Force ${{ github.workspace }}\*
-
     - name: Checkout repository
       uses: actions/checkout@v6
 
-    # Initializes the CodeQL tools for scanning.
-    - name: Initialize CodeQL
+    - name: Initialize CodeQL (${{ matrix.language }})
       uses: github/codeql-action/init@v4
       with:
         languages: ${{ matrix.language }}
-        build-mode: ${{ matrix.build-mode }}
         config-file: ./.github/codeql/codeql-config.yml
-        # If you wish to specify custom queries, you can do so here or in a config file.
-        # By default, queries listed here will override any specified in a config file.
-        # Prefix the list here with "+" to use these queries and those in the config file.
 
-        # For more details on CodeQL's query packs, refer to: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
-        # queries: security-extended,security-and-quality
-
-    - name: Load Variables from buildVariables.cmd
-      if: matrix.language == 'c-cpp'
-      shell: cmd
-      run: |
-        @echo on
-        call "${{ github.workspace }}\Installer\buildVariables.cmd" build_qt6
-
-    - name: Setup msbuild
-      if: matrix.language == 'c-cpp'
-      uses: microsoft/setup-msbuild@v3
-
-    - name: Install Qt6 x64
-      if: matrix.language == 'c-cpp'
-      uses: jurplel/install-qt-action@v4
-      with:
-    #     version: '6.3.1'
-    #     arch:  'win64_msvc2019_64'
-         tools: 'tools_opensslv3_x64'
-         cache: true
-
-    - name: Installing Jom
-      if: matrix.language == 'c-cpp'
-      run: SandboxiePlus\install_jom.cmd
-
-    - name: Build Sandboxie x86 (Dll)
-      if: matrix.language == 'c-cpp'
-      run: msbuild /t:Rebuild Sandboxie\SandboxDll.sln /p:Configuration="SbieRelease" /p:Platform=Win32 -maxcpucount:8
-
-    - name: Build Sandboxie x64
-      if: matrix.language == 'c-cpp'
-      run: msbuild /t:Rebuild Sandboxie\Sandbox.sln /p:Configuration="SbieRelease" /p:Platform=x64 -maxcpucount:8
-
-    - name: Build Sandboxie-Plus x64
-      if: matrix.language == 'c-cpp'
-      run: SandboxiePlus\qmake_plus.cmd x64 build_qt6
-
-    - name: Build SbieShell x64
-      if: matrix.language == 'c-cpp'
-      run: msbuild /t:restore,build -p:RestorePackagesConfig=true SandboxiePlus\SbieShell\SbieShell.sln /p:Configuration="Release" /p:Platform=x64
-
-    - name: Build Sandboxie-Tools x64
-      if: matrix.language == 'c-cpp'
-      run: msbuild /t:Rebuild SandboxieTools\SandboxieTools.sln /p:Configuration="Release" /p:Platform=x64 -maxcpucount:8
-
-    - name: Perform CodeQL Analysis
+    - name: Perform CodeQL Analysis (${{ matrix.language }})
       uses: github/codeql-action/analyze@v4
       with:
-        category: "/language:${{matrix.language}}"
+        category: "/language:${{ matrix.language }}"
