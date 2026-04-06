@@ -11,6 +11,7 @@ on:
   pull_request:
     types:
       - opened
+    # The branches below must be a subset of the branches above.
     branches: [ 'master' ]
     paths:
       - '**.c'
@@ -32,18 +33,56 @@ jobs:
       security-events: write
 
     steps:
+    - name: Cleanup build folder
+      shell: pwsh
+      run: |
+        rm -r -Force ${{ github.workspace }}\*
+
     - name: Checkout repository
       uses: actions/checkout@v6
 
+    # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL (C/C++)
       uses: github/codeql-action/init@v4
       with:
         languages: c-cpp
-        build-mode: autobuild
+        build-mode: manual
         config-file: ./.github/codeql/codeql-config.yml
 
-    - name: Autobuild (C/C++)
-      uses: github/codeql-action/autobuild@v4
+    - name: Load Variables from buildVariables.cmd
+      shell: cmd
+      run: |
+        @echo on
+        call "${{ github.workspace }}\Installer\buildVariables.cmd" build_qt6
+
+    - name: Setup msbuild
+      uses: microsoft/setup-msbuild@v3
+
+    - name: Install Qt6 x64
+      uses: jurplel/install-qt-action@v4
+      with:
+    #     version: '6.3.1'
+    #     arch:  'win64_msvc2019_64'
+         tools: 'tools_opensslv3_x64'
+         cache: true
+
+    - name: Installing Jom
+      run: SandboxiePlus\install_jom.cmd
+
+    - name: Build Sandboxie x86 (Dll)
+      run: msbuild /t:Rebuild Sandboxie\SandboxDll.sln /p:Configuration="SbieRelease" /p:Platform=Win32 -maxcpucount:8
+
+    - name: Build Sandboxie x64
+      run: msbuild /t:Rebuild Sandboxie\Sandbox.sln /p:Configuration="SbieRelease" /p:Platform=x64 -maxcpucount:8
+
+    - name: Build Sandboxie-Plus x64
+      run: SandboxiePlus\qmake_plus.cmd x64 build_qt6
+
+    - name: Build SbieShell x64
+      run: msbuild /t:restore,build -p:RestorePackagesConfig=true SandboxiePlus\SbieShell\SbieShell.sln /p:Configuration="Release" /p:Platform=x64
+
+    - name: Build Sandboxie-Tools x64
+      run: msbuild /t:Rebuild SandboxieTools\SandboxieTools.sln /p:Configuration="Release" /p:Platform=x64 -maxcpucount:8
 
     - name: Perform CodeQL Analysis (C/C++)
       uses: github/codeql-action/analyze@v4
@@ -51,7 +90,7 @@ jobs:
         category: "/language:c-cpp"
 
   analyze-other:
-    name: Analyze (Actions + JS/TS)
+    name: Analyze (Other)
     if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
     runs-on: ubuntu-latest
     timeout-minutes: 60
