@@ -67,7 +67,6 @@ jobs:
       run: |
         @echo on
         call "${{ github.workspace }}\Installer\buildVariables.cmd" build_qt6
-        echo qt6_version=%qt6_version% >> %GITHUB_ENV%
 
     - name: Setup msbuild
       uses: microsoft/setup-msbuild@v3
@@ -77,7 +76,6 @@ jobs:
       uses: jurplel/install-qt-action@v4
       with:
     #     version: '6.3.1'
-    #     version: ${{ env.qt6_version }}
     #     arch:  'win64_msvc2019_64'
          tools: 'tools_opensslv3_x64'
          cache: true
