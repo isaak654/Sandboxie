@@ -60,7 +60,6 @@ jobs:
       uses: actions/checkout@v6
 
     - name: Load Variables from buildVariables.cmd
-      if: matrix.build-mode == 'manual'
       shell: cmd
       run: |
         @echo on
