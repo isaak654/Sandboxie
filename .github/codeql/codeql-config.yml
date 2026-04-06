@@ -1,3 +1,6 @@
+name: "CodeQL config"
 query-filters:
   - exclude:
       id: cpp/incorrect-string-type-conversion
+paths:
+  - ./SandboxiePlus/SandMan/**
