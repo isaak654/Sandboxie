@@ -53,6 +53,7 @@ jobs:
 
     steps:
     - name: Cleanup build folder
+      if: matrix.language == 'c-cpp'
       shell: pwsh
       run: |
         rm -r -Force ${{ github.workspace }}\*
