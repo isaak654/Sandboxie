@@ -63,6 +63,7 @@ jobs:
 
     - name: Load Variables from buildVariables.cmd
       if: matrix.build-mode == 'manual'
+      id: vars
       shell: cmd
       run: |
         @echo on
@@ -78,7 +79,7 @@ jobs:
       uses: jurplel/install-qt-action@v4
       with:
     #     version: '6.3.1'
-         version: '${{ env.qt6_version }}'
+         version: ${{ steps.vars.outputs.qt6_version }}
     #     arch:  'win64_msvc2019_64'
          tools: 'tools_opensslv3_x64'
          cache: true
