@@ -39,7 +39,7 @@ jobs:
         - language: actions
           build-mode: none
         - language: c-cpp
-          build-mode: none
+          build-mode: manual
         - language: javascript
           build-mode: none
         - language: typescript
@@ -62,7 +62,7 @@ jobs:
       uses: actions/checkout@v6
 
     - name: Load Variables from buildVariables.cmd
-      id: vars
+      if: matrix.build-mode == 'manual'
       shell: cmd
       run: |
         @echo on
@@ -77,7 +77,7 @@ jobs:
       uses: jurplel/install-qt-action@v4
       with:
     #     version: '6.3.1'
-         version: ${{ steps.vars.outputs.qt6_version }}
+    #     version: ${{ env.qt6_version }}
     #     arch:  'win64_msvc2019_64'
          tools: 'tools_opensslv3_x64'
          cache: true
