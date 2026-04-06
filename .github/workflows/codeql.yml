@@ -53,6 +53,7 @@ jobs:
 
     steps:
     - name: Cleanup build folder
+      shell: pwsh
       run: |
         rm -r -Force ${{ github.workspace }}\*
 
@@ -103,11 +104,11 @@ jobs:
 
     - name: Build Sandboxie x86 (Dll)
       if: matrix.language == 'c-cpp'
-      run: msbuild /t:build Sandboxie\SandboxDll.sln /p:Configuration="SbieRelease" /p:Platform=Win32 -maxcpucount:8
+      run: msbuild /t:Rebuild Sandboxie\SandboxDll.sln /p:Configuration="SbieRelease" /p:Platform=Win32 -maxcpucount:8
 
     - name: Build Sandboxie x64
       if: matrix.language == 'c-cpp'
-      run: msbuild /t:build Sandboxie\Sandbox.sln /p:Configuration="SbieRelease" /p:Platform=x64 -maxcpucount:8
+      run: msbuild /t:Rebuild Sandboxie\Sandbox.sln /p:Configuration="SbieRelease" /p:Platform=x64 -maxcpucount:8
 
     - name: Build Sandboxie-Plus x64
       if: matrix.language == 'c-cpp'
@@ -119,7 +120,7 @@ jobs:
 
     - name: Build Sandboxie-Tools x64
       if: matrix.language == 'c-cpp'
-      run: msbuild /t:build SandboxieTools\SandboxieTools.sln /p:Configuration="Release" /p:Platform=x64 -maxcpucount:8
+      run: msbuild /t:Rebuild SandboxieTools\SandboxieTools.sln /p:Configuration="Release" /p:Platform=x64 -maxcpucount:8
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v4
