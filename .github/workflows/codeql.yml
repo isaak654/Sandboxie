@@ -61,34 +61,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v6
 
-    - name: Load Variables from buildVariables.cmd
-      if: matrix.language == 'c-cpp'
-      shell: cmd
-      run: |
-        @echo on
-        call "${{ github.workspace }}\Installer\buildVariables.cmd" build_qt6
-
-    - name: Setup msbuild
-      if: matrix.language == 'c-cpp'
-      uses: microsoft/setup-msbuild@v3
-
-    # Qt 6 is only required for ARM64 build currently.
-    - name: Install Qt6 x64
-      if: matrix.language == 'c-cpp'
-      uses: jurplel/install-qt-action@v4
-      with:
-    #     version: '6.3.1'
-    #     arch:  'win64_msvc2019_64'
-         tools: 'tools_opensslv3_x64'
-         cache: true
-
-#    - name: Install Qt5 x64
-#      run: SandboxiePlus\install_qt.cmd x64
-
-    - name: Installing Jom
-      if: matrix.language == 'c-cpp'
-      run: SandboxiePlus\install_jom.cmd
-
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v4
@@ -102,6 +74,30 @@ jobs:
 
         # For more details on CodeQL's query packs, refer to: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
         # queries: security-extended,security-and-quality
+
+    - name: Load Variables from buildVariables.cmd
+      if: matrix.language == 'c-cpp'
+      shell: cmd
+      run: |
+        @echo on
+        call "${{ github.workspace }}\Installer\buildVariables.cmd" build_qt6
+
+    - name: Setup msbuild
+      if: matrix.language == 'c-cpp'
+      uses: microsoft/setup-msbuild@v3
+
+    - name: Install Qt6 x64
+      if: matrix.language == 'c-cpp'
+      uses: jurplel/install-qt-action@v4
+      with:
+    #     version: '6.3.1'
+    #     arch:  'win64_msvc2019_64'
+         tools: 'tools_opensslv3_x64'
+         cache: true
+
+    - name: Installing Jom
+      if: matrix.language == 'c-cpp'
+      run: SandboxiePlus\install_jom.cmd
 
     - name: Build Sandboxie x86 (Dll)
       if: matrix.language == 'c-cpp'
