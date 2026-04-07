@@ -87,9 +87,6 @@ jobs:
     - name: Build Sandboxie-Tools x64
       run: msbuild /t:Rebuild SandboxieTools\SandboxieTools.sln /p:Configuration="Release" /p:Platform=x64 -maxcpucount:8
       
-    #- name: Build Sandboxie x86 (DLLs & svc)
-    #  run: msbuild /t:Rebuild Sandboxie\SandboxDll.sln /p:Configuration="SbieRelease" /p:Platform=Win32 -maxcpucount:8
-
     - name: Build Sandboxie ARM64 (all)
       run: msbuild /t:Rebuild Sandboxie\Sandbox.sln /p:Configuration="SbieRelease" /p:Platform=ARM64 -maxcpucount:8
 
@@ -98,15 +95,6 @@ jobs:
 
     - name: Build Sandboxie ARM64 (drv)
       run: msbuild /t:Rebuild Sandboxie\SandboxDrv.sln /p:Configuration="SbieRelease" /p:Platform=ARM64 -maxcpucount:8
-
-    - name: Build Sandboxie-Plus ARM64
-      run: SandboxiePlus\qmake_plus.cmd ARM64 build_qt6
-
-    - name: Build SbieShell ARM64
-      run: msbuild /t:restore,build -p:RestorePackagesConfig=true SandboxiePlus\SbieShell\SbieShell.sln /p:Configuration="Release" /p:Platform=ARM64
-
-    - name: Build Sandboxie-Tools ARM64
-      run: msbuild /t:build SandboxieTools\SandboxieTools.sln /p:Configuration="Release" /p:Platform=ARM64 -maxcpucount:8
 
     - name: Perform CodeQL Analysis (C/C++)
       uses: github/codeql-action/analyze@v4
