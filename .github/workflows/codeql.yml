@@ -49,13 +49,10 @@ jobs:
       security-events: write
 
     steps:
-    - name: Cleanup build folder
-      shell: pwsh
-      run: |
-        rm -r -Force ${{ github.workspace }}\*
-
     - name: Checkout repository
       uses: actions/checkout@v6
+      with:
+        clean: true
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL (C/C++)
