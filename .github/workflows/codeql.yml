@@ -66,10 +66,12 @@ jobs:
         config-file: ./.github/codeql/codeql-config.yml
 
     - name: Load Variables from buildVariables.cmd
+      id: vars
       shell: cmd
       run: |
         @echo on
         call "${{ github.workspace }}\Installer\buildVariables.cmd" build_qt6
+        echo qt6_version=%qt6_version% >> "%GITHUB_OUTPUT%"
 
     - name: Setup msbuild
       uses: microsoft/setup-msbuild@v3
@@ -77,8 +79,8 @@ jobs:
     - name: Install Qt6 x64
       uses: jurplel/install-qt-action@v4
       with:
-    #     version: '6.3.1'
-    #     arch:  'win64_msvc2019_64'
+         version: ${{ steps.vars.outputs.qt6_version }}
+         arch:  'win64_msvc2022_64'
          tools: 'tools_opensslv3_x64'
          cache: true
 
