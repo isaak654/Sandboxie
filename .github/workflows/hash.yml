@@ -3,7 +3,7 @@ name: Hash Released Files
 on:
   release:
     types:
-      - edited     # Trigger the workflow when release details are edited (including draft updates before publishing)
+      - edited     # Trigger the workflow when release details are edited
 
 concurrency:
   group: hash-${{ github.event.release.tag_name }}  # Use the release tag name for concurrency
