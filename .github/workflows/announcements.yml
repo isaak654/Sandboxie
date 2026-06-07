@@ -193,7 +193,7 @@ jobs:
               jq -c --arg tag "$release_tag" '
                 [
                   .[]
-                  | select(.title | test("(^|[^0-9A-Za-z])" + ($tag | gsub("([][(){}.^$*+?|\\\\-])"; "\\\\\\1")) + "([^0-9A-Za-z]|$)"; "i"))
+                  | select(.title | contains($tag))
                 ]
                 | sort_by(.createdAt)
                 | reverse
