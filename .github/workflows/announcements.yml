@@ -79,8 +79,9 @@ jobs:
                   id
                   number
                   title
-                  url
+                  url                  
                   createdAt
+                  closed
                   locked
                   category {
                     id
@@ -295,7 +296,7 @@ jobs:
 
             actions_made=""
 
-            if [[ "$closed_current" == "false" ]]; then
+            if [[ "$closed_current" != "true" ]]; then
               echo "Closing discussion #${number}: ${title}"
               echo " URL: ${url}"
               echo " Reason: OUTDATED"
