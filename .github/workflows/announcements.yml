@@ -197,6 +197,9 @@ jobs:
             release_like_count="$(jq 'length' <<<"$release_like_discussions")"
             echo "Found ${release_like_count} release-like discussion(s) in category ${CATEGORY_NAME}"
 
+            echo "Debug: release-like discussions JSON:"
+            echo "$release_like_discussions" | jq '.'
+
             if [[ "$release_like_count" -eq 0 ]]; then
               echo "No release-like discussions found."
               exit 0
