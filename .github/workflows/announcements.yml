@@ -273,6 +273,7 @@ jobs:
             number="$(jq -r '.number' <<<"$discussion")"
             title="$(jq -r '.title' <<<"$discussion")"
             url="$(jq -r '.url' <<<"$discussion")"
+            closed="$(jq -r '.closed' <<<"$discussion")"
             locked="$(jq -r '.locked' <<<"$discussion")"
 
             current_state="$(
