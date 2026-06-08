@@ -247,7 +247,7 @@ jobs:
             [
               .[]
               | select(.id != $keep_id)
-              | select(.locked == false and .closed != true)
+              | select(.closed != true)
             ]
             | length
           ' <<<"$release_like_discussions")"
@@ -259,7 +259,7 @@ jobs:
             jq -c --arg keep_id "$keep_id" --arg max_to_lock "$MAX_TO_LOCK" '
               ($max_to_lock | tonumber) as $limit
               | sort_by(.createdAt) | reverse
-              | map(select(.id != $keep_id and .locked == false and .closed != true))
+              | map(select(.id != $keep_id and .closed != true))
               | .[0:$limit]
               | .[]
             ' <<<"$release_like_discussions"
