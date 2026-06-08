@@ -79,7 +79,7 @@ jobs:
                   id
                   number
                   title
-                  url                  
+                  url
                   createdAt
                   closed
                   locked
@@ -311,7 +311,7 @@ jobs:
               actions_made="${actions_made}closed "
             fi
 
-            if [[ "$locked_current" == "false" ]]; then
+            if [[ "$locked_current" != "true" ]]; then
               echo "Locking discussion #${number}: ${title}"
 
               gh api graphql \
