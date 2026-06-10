@@ -15,6 +15,7 @@ jobs:
   lock-announcements:
     name: ${{ github.workflow }}
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       contents: read
       discussions: write
@@ -248,6 +249,16 @@ jobs:
           ' <<<"$release_like_discussions")"
 
           echo "Found ${candidate_count} old unlocked release announcement(s) eligible for locking in total."
+          read -r -d '' CLOSE_AND_LOCK_MUTATION <<'EOF' || true
+          mutation($id: ID!, $close: Boolean!, $lock: Boolean!, $reason: DiscussionCloseReason) {
+            closeDiscussion(input: {discussionId: $id, reason: $reason}) @include(if: $close) {
+              discussion { id }
+            }
+            lockLockable(input: {lockableId: $id}) @include(if: $lock) {
+              lockedRecord { __typename }
+            }
+          }
+          EOF
 
           mapfile -t to_lock < <(
             jq -c --arg keep_id "$keep_id" '
@@ -272,59 +283,42 @@ jobs:
             number="$(jq -r '.number' <<<"$discussion")"
             title="$(jq -r '.title' <<<"$discussion")"
             url="$(jq -r '.url' <<<"$discussion")"
-            closed="$(jq -r '.closed' <<<"$discussion")"
-            locked="$(jq -r '.locked' <<<"$discussion")"
+            closed_current="$(jq -r '.closed' <<<"$discussion")"
+            locked_current="$(jq -r '.locked' <<<"$discussion")"
 
-            current_state="$(
-              gh api graphql \
-                -f id="$id" \
-                -f query='
-                  query($id: ID!) {
-                    node(id: $id) {
-                      ... on Discussion {
-                        closed
-                        locked
-                      }
-                    }
-                  }
-                ' \
-                --jq '.node'
-            )"
-
-            closed_current="$(echo "$current_state" | jq -r '.closed')"
-            locked_current="$(echo "$current_state" | jq -r '.locked')"
-
-            actions_made=""
+            need_close=false
+            need_lock=false
 
             if [[ "$closed_current" != "true" ]]; then
               echo "Closing discussion #${number}: ${title}"
               echo " URL: ${url}"
               echo " Reason: OUTDATED"
-
-              gh api graphql \
-                -f id="$id" \
-                -f reason="OUTDATED" \
-                -f query="$CLOSE_MUTATION" \
-                >/dev/null
-
-              echo " → Closed ✓"
-              actions_made="${actions_made}closed "
+              need_close=true
             fi
 
             if [[ "$locked_current" != "true" ]]; then
               echo "Locking discussion #${number}: ${title}"
-
-              gh api graphql \
-                -f id="$id" \
-                -f query="$LOCK_MUTATION" \
-                >/dev/null
-
-              echo " → Locked ✓"
-              actions_made="${actions_made}locked "
+              need_lock=true
             fi
 
-            if [[ -n "$actions_made" ]]; then
+            if [[ "$need_close" == "true" || "$need_lock" == "true" ]]; then
+              gh api graphql \
+                -F id="$id" \
+                -F close="$need_close" \
+                -F lock="$need_lock" \
+                -f reason="OUTDATED" \
+                -f query="$CLOSE_AND_LOCK_MUTATION" \
+                >/dev/null
+
+              if [[ "$need_close" == "true" ]]; then
+                echo " → Closed ✓"
+              fi
+              if [[ "$need_lock" == "true" ]]; then
+                echo " → Locked ✓"
+              fi
+
               closed_and_locked_count=$((closed_and_locked_count + 1))
+              sleep 1
             fi
           done
 
